@@ -34,8 +34,18 @@ Route::get('lien-he','App\Http\Controllers\HomeController@lienhe' );
 // lien diem tin
 Route::get('diem-tin','App\Http\Controllers\HomeController@diemtin' );
 
-// // trang khach hang - cua hang (frontend)
-// Route::get('cua-hang','App\Http\Controllers\CuaHangController@index_CuaHang' );
+//
+Route::get('chuyen-muc-diem-tin/{ID_CHUYENMUC_DT}','App\Http\Controllers\DiemTinController@show_ChuyenMucDT' );
+
+//
+Route::get('chi-tiet-diem-tin/{ID_DT}','App\Http\Controllers\DiemTinController@show_ChiTietDT' );
+
+// van ban
+Route::get('van-ban','App\Http\Controllers\HomeController@vanban' );
+
+Route::get('chuyen-muc-van-ban/{ID_CHUYENMUC_VB}','App\Http\Controllers\VanBanController@show_ChuyenMucVB' );
+
+Route::get('chi-tiet-van-ban/{ID_VB}','App\Http\Controllers\VanBanController@show_ChiTietVB' );
 
 // // khach hang - tim kiem san pham
 // Route::post('/tim-kiem-san-pham','App\Http\Controllers\HomeController@timkiem' );

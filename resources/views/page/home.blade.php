@@ -66,7 +66,8 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="item-img img-left">
                                     @foreach($diemtin1 as $key=>$dt)
-                                    <a href="#" title=""><img class="img-fluid" style="height: 30rem"
+                                    <a href="{{URL::to('chi-tiet-diem-tin/'.$dt->ID_DT)}}"
+                                     title=""><img class="img-fluid" style="height: 30rem"
                                             src="{{URL::to('public/upload/'.$dt->HINHANH_DT)}}" alt="img"></a>
                                     @endforeach
                                 </div>
@@ -85,11 +86,11 @@
 
                                             <div class="index-core-group flex-center clearfix  align-items-center">
                                             <div class="item-img float-left" style="width: 16rem">
-                                                <a href="#" title=""><img class="img-fluid" style="height: 8rem; width: 15rem;"  src="{{URL::to('public/upload/'.$dt->HINHANH_DT)}}"  ></a>
+                                                <a href="{{URL::to('chi-tiet-diem-tin/'.$dt->ID_DT)}}" title=""><img class="img-fluid" style="height: 8rem; width: 15rem;"  src="{{URL::to('public/upload/'.$dt->HINHANH_DT)}}"  ></a>
                                             </div>
                                             <div class="item-content">
                                                 <div class="sub-title">
-                                                    <h4 class="no-ater" style="font-size: 16px">{{$dt->TIEUDE_DT}}</h4>
+                                                   <a href="{{URL::to('chi-tiet-diem-tin/'.$dt->ID_DT)}}"> <h4 class="no-ater" style="font-size: 16px">{{$dt->TIEUDE_DT}}</h4></a>
 
                                                 </div>
                                             </div>

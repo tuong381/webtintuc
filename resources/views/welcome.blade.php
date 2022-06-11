@@ -106,7 +106,7 @@
 
                                             </li>
 
-                                             <li class="dropdown"><a href="#">Văn bản </a>
+                                             <li class="dropdown"><a href="{{URL::to('van-ban')}}">Văn bản </a>
 
                                             </li>
 

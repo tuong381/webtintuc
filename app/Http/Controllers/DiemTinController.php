@@ -14,64 +14,53 @@ use Toastr;
 
 class DiemTinController extends Controller
 {
-    //
-    public function them_LoaiDT(){
-
-        return view('admin.LoaiDiemTin.them_LoaiDT');
-    }
-
-
-    public function luu_LoaiDT(Request $request){
-        $data = array();
-        $data['TEN_LDT'] = $request->TEN_LDT;
-        // insert vao csdl
-        DB:: table ('loaidiemtin')->insert($data);
-       Toastr::success('Thêm loại điểm tin  '.$request->Ten_LDT.' thành công', 'Success',);
-        //tra ve
-        return Redirect::to('admin-lietke-LoaiDT');
-
-    }
-
-
-    public function lietke_LoaiDT(){
-        $lietke_LoaiDT = DB:: table('loaidiemtin')->orderby('ID_LDT','desc')->paginate(10);
-        $quanli_LoaiDT = view('admin.LoaiDiemTin.lietke_LoaiDiemTin')->with('lietke_LoaiDT',$lietke_LoaiDT);
-        return view('Admin_index')->with('admin.LoaiDiemTin.lietke_LoaiDiemTin',$quanli_LoaiDT);
-    }
-
-    public function sua_LoaiDT($ID_LDT){
-        $sua_LoaiDT= DB:: table('loaidiemtin')->where('ID_LDT',$ID_LDT)->get();
-        $quanli_LoaiDT = view('admin.LoaiDiemTin.sua_LoaiDiemTin')->with('sua_LoaiDT',$sua_LoaiDT);
-        return view('Admin_index')->with('admin.LoaiDiemTin.sua_LoaiDiemTin',$quanli_LoaiDT);
-    }
-
-    public function capnhat_LoaiDT(Request $request, $ID_LDT){
-
-        $data = array();
-        $data['TEN_LDT'] = $request->TEN_LDT;
-
-        // insert vao csdl
-        DB:: table ('loaidiemtin')->where('ID_LDT',$ID_LDT)->update($data);
-        Toastr::success('Cập nhật loại điểm tin'.$request->TEN_LDT.' thành công', 'Success',);
-        //tra ve
-        return Redirect::to('admin-lietke-LoaiDT');
-    }
-
-    public function xoa_LoaiDT( $ID_LDT){
-
-        // insert vao csdl
-        DB:: table ('loaidiemtin')->where('ID_LDT',$ID_LDT)->delete();
-        Toastr::success('Xóa loại điểm tin thành công', 'Success',);
-        //tra ve
-        return Redirect::to('admin-lietke-LoaiDT');
-    }
-
-
 
 
     /// khach hang
-    public function diemtin(')
-    {
-        $diemtin=DB::table('diemtin')->orderby('ID_DT','asc')->get();
+    public function show_ChuyenMucDT($ID_CHUYENMUC_DT){
+
+        $chuyenmucdiemtin=DB::table('chuyenmucdiemtin')->orderby('ID_CHUYENMUC_DT','desc')->get();
+
+
+
+        $danhmuc= DB::table('diemtin')
+                    ->join('chuyenmucdiemtin','chuyenmucdiemtin.ID_CHUYENMUC_DT','=','diemtin.ID_CHUYENMUC_DT')
+                    ->where('chuyenmucdiemtin.ID_CHUYENMUC_DT',$ID_CHUYENMUC_DT )
+                    ->get();
+
+        $chuyenmuc_ten= DB::table('chuyenmucdiemtin')
+
+                    ->where('chuyenmucdiemtin.ID_CHUYENMUC_DT',$ID_CHUYENMUC_DT )
+                    ->limit(1)->get();
+
+
+        return view('page.DiemTin.CM_DiemTin')->with('chuyenmuc_ten',$chuyenmuc_ten)
+                ->with('chuyenmucdiemtin',$chuyenmucdiemtin)->with('danhmuc',$danhmuc);
     }
+
+    public function show_ChiTietDT ($ID_DT ){
+
+         $diemtin=DB::table('diemtin')
+                    ->join('chuyenmucdiemtin','chuyenmucdiemtin.ID_CHUYENMUC_DT','=','diemtin.ID_CHUYENMUC_DT')
+                     ->where('diemtin.ID_DT',$ID_DT)
+                     ->get();
+       $chuyenmuc_ten= DB::table('diemtin')
+                    ->join('chuyenmucdiemtin','chuyenmucdiemtin.ID_CHUYENMUC_DT','=','diemtin.ID_CHUYENMUC_DT')
+                     ->where('diemtin.ID_DT',$ID_DT)
+                    ->limit(1)->get();
+        // diem tin lien quan
+
+         foreach($diemtin as $key => $value){
+            $ID_CHUYENMUC_DT = $value->ID_CHUYENMUC_DT;
+        }
+        $DT_lienquan = DB:: table('diemtin')
+            ->join('chuyenmucdiemtin','chuyenmucdiemtin.ID_CHUYENMUC_DT','=','diemtin.ID_CHUYENMUC_DT')
+            ->where('chuyenmucdiemtin.ID_CHUYENMUC_DT',$ID_CHUYENMUC_DT)
+                          ->limit(5)->get();
+
+         return view('page.DiemTin.chitiet_DiemTin') ->with('diemtin',$diemtin)
+                ->with('chuyenmuc_ten',$chuyenmuc_ten)
+                ->with('DT_lienquan',$DT_lienquan);
+}
+
 }

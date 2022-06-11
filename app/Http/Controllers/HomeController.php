@@ -59,7 +59,18 @@ class HomeController extends Controller
 
     public function diemtin(){
         $chuyenmucdiemtin=DB::table('chuyenmucdiemtin')->orderby('ID_CHUYENMUC_DT','desc')->get();
-        return view('page.DiemTin.DiemTin')->with('chuyenmucdiemtin',$chuyenmucdiemtin);
+
+         $diemtin=DB::table('diemtin')->orderby('ID_DT','desc')->paginate(5);
+        return view('page.DiemTin.DiemTin')->with('chuyenmucdiemtin',$chuyenmucdiemtin)
+                ->with('diemtin',$diemtin);
+    }
+
+    public function vanban(){
+        $chuyenmucvanban=DB::table('chuyenmucvanban')->orderby('ID_CHUYENMUC_VB','desc')->get();
+
+         $vanban=DB::table('vanban')->orderby('ID_VB','desc')->paginate(5);
+        return view('page.VanBan.VanBan')->with('chuyenmucvanban',$chuyenmucvanban)
+                ->with('vanban',$vanban);
     }
 
 

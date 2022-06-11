@@ -11,7 +11,7 @@
             </div>
             <div class="breadcrumbs-container text-center">
                 <ul class="breadcrumbs primary-font">
-                    <li><a href="{{URL::to('/trang-chu')}}"><span style="font-family: 'FontAwesome'; color: #ffff00">Điểm tin</span></a>
+                    <li><a href="#"><span style="font-family: 'FontAwesome'; color: #ffff00">Văn bản</span></a>
                     </li>
                     </li>
                 </ul>
@@ -30,7 +30,7 @@
 
                 <div class="content-about text-center m-top">
                             <div class="row" style="justify-content: center">
-                                @foreach($chuyenmucdiemtin as $key=>$chuyenmuc)
+                                @foreach($chuyenmucvanban as $key=>$chuyenmuc)
                                 <div class="col-lg-3 col-md-6 col-sm-12 mg-bottom-50" >
                                    {{--  <div class="item" style="background-color: #ff9933">
 
@@ -42,7 +42,7 @@
                                         </div>
                                     </div> --}}
                                     <div class="right-left hidden-xs slow disciver-now" class="dd" >
-                                        <a class="btn button button-main" style="background-color: #c4851a" href="{{URL::to('chuyen-muc-diem-tin/'.$chuyenmuc->ID_CHUYENMUC_DT)}}">{{$chuyenmuc->TEN_CHUYENMUC_DT}}</a>
+                                        <a class="btn button button-main" style="background-color: #c4851a" href="{{URL::to('chuyen-muc-van-ban/'.$chuyenmuc->ID_CHUYENMUC_VB)}}">{{$chuyenmuc->TEN_CHUYENMUC_VB}}</a>
                                      </div>
                                 </div>
                                 @endforeach
@@ -68,14 +68,14 @@
                         <div id="list" class="tab-pane active">
                             <div class="product">
                                 <div class="item">
-                                    @foreach($diemtin as $key=>$dt)
+                                    @foreach($vanban as $key=>$vb)
                                     <div class="row" style="margin-bottom: 50px"  >
 
                                         <div class="col-md-5 col-sm-12">
                                             <div class="product-thumb">
                                                 <div class="product-container item-img">
                                                     <div class="product-image-container">
-                                                        <a class="product-img-link" href="{{URL::to('chi-tiet-diem-tin/'.$dt->ID_DT)}}" title=""><img class="w-100" src="{{URL::to('public/upload/'.$dt->HINHANH_DT)}}" alt="img">
+                                                        <a class="product-img-link" href="{{URL::to('chi-tiet-van-ban/'.$vb->ID_VB)}}" title=""><img class="w-100" src="{{URL::to('public/upload/'.$vb->HINHANH_VB)}}" alt="img">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -83,14 +83,14 @@
                                         </div>
                                         <div class="col-md-7 col-sm-12">
                                             <div class="content-right" style="color: black">
-                                                <a href="{{URL::to('chi-tiet-diem-tin/'.$dt->ID_DT)}}" style="font-family: emoji; color: black; font-size: 25px">
-                                                    {{$dt->TIEUDE_DT}}</a>
+                                                <a href="{{URL::to('chi-tiet-van-ban/'.$vb->ID_VB)}}" style="font-family: emoji; color: black; font-size: 25px">
+                                                    {{$vb->TIEUDE_VB}}</a>
 
-                                                <div class="price font-600 color-default" href="{{URL::to('chi-tiet-diem-tin/'.$dt->ID_DT)}}">
-                                                    <span style="color: #9f6605" >{{$dt->NGAYDANG_DT}}</span>
+                                                <div class="price font-600 color-default" href="{{URL::to('chi-tiet-van-ban/'.$vb->ID_VB)}}">
+                                                    <span style="color: #9f6605" >{{$vb->NGAYDANG_VB}}</span>
                                                 </div>
                                                 <div class="button d-flex align-items-center" style="margin-top: 3rem">
-                                                    <a class="btn view button-main" href="{{URL::to('chi-tiet-diem-tin/'.$dt->ID_DT)}}"
+                                                    <a class="btn view button-main" href="{{URL::to('chi-tiet-van-ban/'.$vb->ID_VB)}}"
                                                     style="background-color: rgba(0,0,0,0.02);
                                                         box-shadow: 1px 1px 3px 0px rgb(0 0 0 / 20%), 0 1px 0 rgb(0 0 0 / 7%), inset 0 0 0 1px rgb(0 0 0 / 5%); color: #9f6605;
                                                             border-color: rgba(0,0,0,0.02)" >
@@ -111,7 +111,7 @@
 
                     <div style="margin-left: 30rem">
 
-                            {{ $diemtin->links("pagination::bootstrap-4") }}
+                            {{ $vanban->links("pagination::bootstrap-4") }}
 
 
                     </div>
