@@ -29,12 +29,6 @@
 
 
 
-
-
-
-
-
-
       {{--  <link rel="stylesheet" href="{{asset('public/frontend/css/bootstrap.min.css')}}">
       <!-- style css -->
       <link rel="stylesheet" href="{{asset('public/frontend/css/style.css')}}">
@@ -72,8 +66,8 @@
                                             <li class="dropdown ">
 
 
-                                                <a href="#">Giới thiệu <i
-                                                        class="fa fa-angle-down d-xs-none"></i></a>
+                                                <a href="#">Giới thiệu
+                                                    <i class="fa fa-angle-down d-xs-none"></i></a>
 
 
                                                     <div class="dropdown-menu">
@@ -94,14 +88,7 @@
                                             </li>
                                             <li class="dropdown blog-fullwidth"><a href="{{URL::to('diem-tin')}}">Điểm tin</a>
                                                 <div class="dropdown-menu level2 header blog">
-                                                   {{--  @foreach($danhmuc_BaiViet as $key=>$danhmuc_baiviet)
-                                                    <ul>
 
-                                                        <li><a href="{{URL::to('danh-muc-bai-viet/'.$danhmuc_baiviet->id_DanhMucBaiViet)}}">{{$danhmuc_baiviet->TenDanhMucBaiViet}}</a></li>
-
-
-                                                    </ul>
-                                                     @endforeach --}}
                                                 </div>
 
                                             </li>
@@ -110,45 +97,28 @@
 
                                             </li>
 
+                                            <li class="dropdown"><a href="{{URL::to('phap-luat')}}">Pháp luật</a>
+                                            </li>
+
+                                            <li class="dropdown ">
 
 
+                                                <a href="#">Hội viên
+                                                    <i class="fa fa-angle-down d-xs-none"></i></a>
 
-                                            <li class="dropdown"><a href="#">Pháp luật</a>
-                                               {{--  <div class="dropdown-menu">
+
+                                                    <div class="dropdown-menu">
+                                                     {{--    @foreach($danhmuc_SP as $key=>$danhmuc) --}}
                                                     <ul>
-                                                        <?php
-                                                        $id_KH = Session::get('id_KH');
-                                                        if($id_KH != NULL){
 
-
-                                                        ?>
-                                                         <li><a href="{{URL::to('/xem-danh-sach-don-hang')}}">Lịch sử mua hàng</a></li>
-
-                                                          <li><a href="{{URL::to('/tai-khoan-cua-toi')}}">Tài khoản của bạn</a></li>
-
-                                                         <li><a href="{{URL::to('/logout')}}">Đăng xuất</a></li>
-
-
-
-
-
-                                                        <?php
-                                                        }else{
-                                                        ?>
-
-                                                        <li><a href="{{URL::to('/login')}}">Đăng nhập</a></li>
-                                                        <li><a href="{{URL::to('/dang-ky')}}">Đăng ký</a></li>
-
-                                                        <?php
-                                                        }
-                                                        ?>
+                                                        <li><a href="{{URL::to('/danh-sach-hoi-vien')}}">Danh sách hội viên</a></li>
+                                                        <li><a href="{{URL::to('/danh-sach-vpcc')}}">Danh sách VPCC</a></li>
 
 
                                                     </ul>
-                                                </div> --}}
-                                            </li>
+                                                    {{--  @endforeach --}}
+                                                </div>
 
-                                            <li class="dropdown"><a href="{{URL::to('Lien-he')}}">Hội viên</a>
 
                                             </li>
 
@@ -164,31 +134,19 @@
                                 </div>
                             </div>
                             <div class="col-lg-2 col-7 icon-menu-sm">
-                                <div class="hearder-icon home clearfix">
-                                    <div class="header-block user-block index-bars popup-over pull-right">
-                                        <div {{-- data-toggle="dropdown" --}} class="popup-title">
-                                            <a href="{{URL::to('/login')}}" >
-                                                <span
-                                                    class="open-menu d-none d-lg-block menu-desktop"> </span>
-                                                    <i class="fa fa-ellipsis-v open-menu d-lg-none"
-                                                    aria-hidden="true" ></i>
-                                                </a>
-
-                                        </div>
-                                    </div>
 
                                     <div class="header-block search-block popup-over pull-right">
                                         <div data-toggle="dropdown" class="popup-title"><a href="#" title="Search">
                                             <i class="flaticon-search" style="color: #915e09"></i></a></div>
                                         <div class="popup-content">
-                                            <form {{-- id="searchbox" --}} action="{{URL::to('/tim-kiem-san-pham')}}"
+                                            <form {{-- id="searchbox" --}} action="{{URL::to('/tim-kiem')}}"
                                                  method="post">
                                                  {{csrf_field()}}
                                                 <div class="input-group"><input class="search-query form-control"
-                                                        type="text" name="tu_timkiem" placeholder="Seach" value=""
+                                                        type="text" name="tu_timkiem" placeholder="Nhập từ tìm kiếm" value=""
                                                         autocomplete="off">
                                                     <div class="input-group-btn">
-                                                        <button type="submit" name="submit_search" class="btn button btn-default float-right">Search</button>
+                                                        <button type="submit" name="submit_search" class="btn button btn-default float-right" style="background-color: #b36b00">Search</button>
                                                     </div>
 
 
@@ -236,16 +194,7 @@
                                     </div>
                                 </div>
                             </div>
-                           {{--  <div class="col-lg-7 col-md-12">
-                                <form action="#" method="post">
-                                    <div class="item">
-                                        <div class="input"><input type="email" name="EMAIL" placeholder="Your Email"
-                                                required></div>
-                                        <div class="submit"><button type="submit"
-                                                class="btn-submit btn button-main">Subscribe</button></div>
-                                    </div>
-                                </form>
-                            </div> --}}
+
                         </div>
                     </div>
                 </div>
@@ -263,67 +212,44 @@
 
                                         <ul>
                                             <li class="d-flex bg-icon"><span><i class="fa fa-map-marker"
-                                                        aria-hidden="true"></i></span><span> Đường 3/2, Phường Xuân Khánh, Quận Ninh Kiều, TP.Cần Thơ</span>
+                                                        aria-hidden="true"></i></span><span> Số 1A Trần Khánh Dư, Xuân Khánh, Ninh Kiều, Cần Thơ .</span>
                                             </li>
                                             <li class="d-flex bg-icon"><span><i class="fa fa-phone"
-                                                        aria-hidden="true"></i></span><span>073 246 2322</span>
+                                                        aria-hidden="true"></i></span><span>02923.832.213</span>
                                             </li>
                                             <li class="d-flex bg-icon"><span><i class="fa fa-paper-plane-o"
-                                                        aria-hidden="true"></i></span><span>MarketOnline@gmail.com</span>
+                                                        aria-hidden="true"></i></span><span>hoicongchungct@gmail.com</span>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-2 col-md-6 col-sm-6 mg-bottom-30">
-                                <div class="item">
+
+                            <div class="col-lg-3 col-md-6 col-sm-6 mg-bottom-30">
+                                <div class="item contact-us">
                                     <div class="item-content">
                                         <div class="sub-title">
-                                            <h4 class="title-black">Sản phẩm</h4>
+                                            <h4 class="title-black">Đăng ký nhận tin</h4>
+
                                         </div>
-                                    </div>
-                                    <div class="content">
+                                    <form method="post" action="{{URL::to('/dang-ky-nhan-tin')}}" class="new-review-form" enctype="multipart/form-data">
+                                    {{csrf_field()}}
 
-                                    {{-- @foreach($danhmuc_SP as $key=>$danhmuc)
-                                        <ul>
-                                              <li><a href="{{URL::to('danh-muc-san-pham/'.$danhmuc->id_DanhMuc)}}">{{$danhmuc->TenDanhMuc}}</a>
-                                              </li>
-                                        </ul>
+                                        <div class="input-group">
+                                            <input class="search-query form-control"
+                                                        type="text" name="EMAIL_KHACH" placeholder="Email" autocomplete="off">
+                                                <div class="input-group-btn">
+                                                    <button type="submit" name="submit_search" class="btn button btn-default float-right" style="background-color: #b36b00">Đăng ký</button>
+                                                </div>
 
-                                    @endforeach --}}
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-md-6 col-sm-6 mg-bottom-30">
-                                <div class="item">
-                                    <div class="item-content">
-                                        <div class="sub-title">
-                                            <h4 class="title-black">Danh mục</h4>
                                         </div>
+                                    </form>
                                     </div>
-                                    <div class="content">
-                                        <ul>
-                                            <li class="m-bottom-0">
-                                                <a href="{{URL::to('/trang-chu')}}" title="Terms & Conditions">Trang chủ</a>
-                                            </li>
-                                            <li class="m-bottom-0">
-                                                <a href="{{URL::to('/cua-hang')}}" title="Return Policy">Giới thiệu</a>
-                                            </li>
-                                            <li class="m-bottom-0">
-                                                <a href="{{URL::to('/Blog')}}" title="Refund Policy">Blog</a>
-                                            </li>
-                                            <li class="m-bottom-0">
-                                                <a href="{{URL::to('Lien-he')}}" title="Refund Policy">Liên hệ</a>
-                                            </li>
-                                            <li class="m-bottom-0">
-                                                <a href="#" title="Refund Policy">Tài khoản</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+
                                 </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6 col-sm-6">
+                            </div>`
+
+                            <div class="col-lg-4 col-md-6 col-sm-6" style="margin-left: 5rem">
                                 <div class="about-layout">
                                     <div class="group">
                                         <div class="group-inner  text-center">
@@ -332,34 +258,17 @@
                                             <div class="about-content">
                                                 <p>Cảm ơn quý khách đã ghé cửa hàng của chúng tôi. Cửa hàng chúng tôi luôn cung cấp những sản phẩm tươi ngon, đảm bảo an toàn thực phẩm.</p>
                                             </div>
-                                           {{--  <div class="widget-social">
-                                                <ul class="d-flex justify-content-center">
-                                                    <li class="social-facebook"><a class="gsf-link" title="Facebook"
-                                                            href="#"><i class="fa fa-facebook"></i></a></li>
-                                                    <li class="social-twitter"><a class="gsf-link" title="Twitter"
-                                                            href="#"><i class="fa fa-twitter"></i></a></li>
-                                                    <li class="social-google-plus"><a class="gsf-link" title="Google+"
-                                                            href="#"><i class="fa fa-google-plus"></i></a></li>
-                                                    <li class="social-instagram"><a class="gsf-link" title="Instagram"
-                                                            href="#"><i class="fa fa-instagram"></i></a></li>
-                                                    <li class="social-pinterest"><a class="gsf-link" title="Pinterest"
-                                                            href="#"><i class="fa fa-pinterest"></i></a></li>
-                                                </ul>
-                                            </div> --}}
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
+
                         </div>
                     </div>
                 </div>
-                {{-- <div class="footer-copyright text-center">
-                    <div class="container">
-                        <div class="content"> Copyright © 2019 <span>OARS ORGANIC.</span>All Rights <a
-                                href="http://www.bootstrapmb.com/">Reserved</a>. Design by <span
-                                class="tranform-none">TivaTheme</span></div>
-                    </div>
-                </div> --}}
+
             </div>
         </footer>
     </div><!-- Back-To-Top Button -->
@@ -413,85 +322,6 @@
 
 
 
-
-
-
-
-
-
- {{--  <script type="text/javascript">
-        $(document).ready(function(){
-
-            // show so luong gio hang
-            show_cart();
-            function show_cart(){
-                $.ajax({
-                     url:'{{url('/show-so-luong-gio-hang')}}',
-                     method:"GET",
-
-                     success:function(data){
-                        $('#show-cart').html(data);
-                     }
-
-                });
-
-            }
-
-
-            // them vao gio hang
-             $('.add-to-cart').click(function(){
-               // Swal.fire('Any fool can use a computer')
-               const Toast = Swal.mixin({
-                      toast: true,
-
-                      showConfirmButton: false,
-                      timer: 30000,
-                      timerProgressBar: true,
-                      didOpen: (toast) => {
-                        toast.addEventListener('mouseenter', Swal.stopTimer)
-                        toast.addEventListener('mouseleave', Swal.resumeTimer)
-                      }
-                    })
-
-                    Toast.fire({
-                      icon: 'success',
-                      title: 'Đã thêm vào giỏ hàng'
-                    })
-
-
-
-        });
-    });
-    </script>
-
-
-    <script type="text/javascript">
-        function Huydonhang(id){
-            var id_HD=id;
-            var LyDoHuyDon = $('.lydohuydon').val();
-            var _token = $('input[name="_token"]').val();
-            $.ajax({
-                url:'{{url('/huy-don-hang')}}',
-                method: "POST",
-                data:{_token:_token,  id_HD:id_HD, LyDoHuyDon:LyDoHuyDon},
-                success:function(data){
-                    alert("huy don hang thanh cong");
-                    location.reload();
-                }
-
-
-            });
-        }
-    </script> --}}
-
-
-
-
-    {{-- <script type="text/javascript">
-        $.validate({
-
-        });
-    </script> --}}
 
 
 

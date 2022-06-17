@@ -15,13 +15,6 @@ use Mail;
 class HomeController extends Controller
 {
 
-    public function mail(){
-
-        return view('admin.Mail.vd');
-
-
-
-    }
 
 
 
@@ -73,25 +66,64 @@ class HomeController extends Controller
                 ->with('vanban',$vanban);
     }
 
+    public function phapluat(){
+        $chuyenmucphapluat=DB::table('chuyenmucphapluat')->orderby('ID_CHUYENMUC_PL','desc')->get();
+
+         $phapluat=DB::table('phapluat')->orderby('ID_PL','desc')->paginate(5);
+        return view('page.PhapLuat.PhapLuat')->with('chuyenmucphapluat',$chuyenmucphapluat)->with('phapluat',$phapluat);
+    }
+
+    public function vpcc(){
+
+
+         $vpcc=DB::table('vanphongcongchung')->orderby('ID_VPCC','desc')->paginate(12);
+        return view('page.HoiVien.VPCC')->with('vpcc',$vpcc);
+    }
+
+    public function hoivien(){
+
+
+         $hoivien=DB::table('hoivien')->orderby('ID_HV','desc')->paginate(12);
+        return view('page.HoiVien.HoiVien')->with('hoivien',$hoivien);
+    }
+
+    public function donggop(Request $request){
+
+        $data = array();
+        $data['HOTEN_YKDG'] = $request->HOTEN_YKDG;
+        $data['EMAIL_YKDG'] = $request->EMAIL_YKDG;
+        $data['SDT_YKDG'] = $request->SDT_YKDG;
+        $data['NOIDUNG_YKDG'] = $request->NOIDUNG_YKDG;
+
+
+         $donggop=DB::table('ykiendonggop')->InsertGetId($data);
+         Toastr::success('Bạn đã gửi ý kiến đóng góp thành công', 'Success',);
+        return Redirect::to('lien-he');
+    }
+
+    public function dkNhanTin(Request $request){
+
+        $data = array();
+        $data['EMAIL_KHACH'] = $request->EMAIL_KHACH;
+
+
+         $donggop=DB::table('khach')->InsertGetId($data);
+         Toastr::success('Bạn đã đăng ký nhận tin thành công', 'Success',);
+        return Redirect::to('trang-chu');
+    }
+
+
 
      // tim kiem
     public function timkiem(Request $request){
 
         $tu_timkiem = $request->tu_timkiem;
 
-        $danhmuc_SP=DB::table('danhmucsanpham')->orderby('id_DanhMuc','asc')->get();
+        $timkiem_VB = DB::table('vanban')->where('TIEUDE_VB','like','%'.$tu_timkiem.'%')->get();
 
-         $danhmuc_BaiViet=DB::table('danhmucbaiviet')->orderby('id_DanhMucBaiViet','asc')->get();
 
-        $timkiem_SP = DB::table('sanpham')->where('TenSanPham','like','%'.$tu_timkiem.'%')->get();
-            // ->orwhere('unit_price',$tu_timkiem)-
-
-         $sanpham = DB::table('sanpham')->orderby('id_SanPham','desc')->limit(5)->get();
-
-    //   $cfr = count($timkiem_SP);
-
-        return view('page.SanPham.timkiem')->with('danhmuc_SP',$danhmuc_SP)->with('timkiem_SP',$timkiem_SP)
-            ->with('tu_timkiem',$tu_timkiem) ->with('sanpham',$sanpham)->with('danhmuc_BaiViet',$danhmuc_BaiViet);
+        return view('page.TimKiem')->with('timkiem_VB',$timkiem_VB)
+            ->with('tu_timkiem',$tu_timkiem) ;
 
     }
 

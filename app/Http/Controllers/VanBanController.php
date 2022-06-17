@@ -25,6 +25,7 @@ class VanBanController extends Controller
                     ->where('chuyenmucvanban.ID_CHUYENMUC_VB',$ID_CHUYENMUC_VB )
                     ->get();
 
+
         $chuyenmuc_ten= DB::table('chuyenmucvanban')
 
                     ->where('chuyenmucvanban.ID_CHUYENMUC_VB',$ID_CHUYENMUC_VB )

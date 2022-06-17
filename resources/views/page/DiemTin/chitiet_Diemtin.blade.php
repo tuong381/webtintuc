@@ -69,7 +69,7 @@
                                 <div class="row" style="margin-right: 3rem">
                                     @foreach($diemtin as $key=>$dt)
 
-                                     <p>{{$dt->NOIDUNG_DT}}</p>
+                                     <p>{!!$dt->NOIDUNG_DT!!}</p>
 
                                      @endforeach
                                 </div>
