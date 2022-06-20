@@ -149,7 +149,7 @@
 
                                             <div class="index-core-group flex-center clearfix  align-items-center">
                                             <div class="item-img float-left" style="width: 16rem">
-                                                <a href="#" title=""><img class="img-fluid" style="height: 8rem; width: 15rem;"  src="{{URL::to('public/upload/'.$vb->HINHANH_VB)}}"  ></a>
+                                                <a href="{{URL::to('chi-tiet-van-ban/'.$vb->ID_VB)}}" title=""><img class="img-fluid" style="height: 8rem; width: 15rem;"  src="{{URL::to('public/upload/'.$vb->HINHANH_VB)}}"  ></a>
                                             </div>
                                             <div class="item-content" style="float: inherit">
                                                 <div class="sub-title">
@@ -193,13 +193,13 @@
                                                   @endphp
 
                                             <div class="index-core-group flex-center clearfix  align-items-center">
-                                           {{--  <div class="item-img float-left" style="width: 16rem">
-                                                <a href="#" title=""><img class="img-fluid" style="height: 8rem; width: 15rem;"  src="#"  ></a>
-                                            </div> --}}
+
                                             <div class="item-content">
                                                 <div class="sub-title">
-                                                    <h4 class="no-ater" style="font-size: 18px; font-weight: 400; font-family: 'FontAwesome'; line-height: 1.5rem;"> <label style="font-weight: 600;">{{$i}}</label>. {{$pl->TIEUDE_PL}}</h4>
+                                                     <a href="{{URL::to('chi-tiet-phap-luat/'.$pl->ID_PL)}}">
 
+                                                    <h4 class="no-ater" style="font-size: 18px; font-weight: 400; font-family: 'FontAwesome'; line-height: 1.5rem;"> <label style="font-weight: 600;">{{$i}}</label>. {{$pl->TIEUDE_PL}}</h4>
+                                                </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -237,38 +237,74 @@
                                                 font-weight: 600;
                                                 font-size: 30px;
                                                 font-family: UTM-COPPERPLATE;
-                                                 margin-right: 57rem;
-                                                 margin-top: 3rem">THÀNH VIÊN </h2>
+                                                 margin-right: 44rem;
+                                                 margin-top: 3rem">VĂN PHÒNG CÔNG CHỨNG</h2>
 
                                     <br>
                                 {{-- </div> --}}
                             </div>
                         </div>
-                        {{-- <div class="content-about text-center m-top">
-                            <div class="row"> --}}
-                               {{--  <div class="section tiva-slideshow-wrapper">
-                                <div id="tiva-slideshow" class="nivoSlider">
-                                    <a href="#" title="Slideshow image"><img class="img-fluid" src="{{asset('public/frontend/img/banner.jpg')}}" title="#caption1" alt="Slideshow image" >
-                                    </a>
-                                    <a href="#" title="Slideshow image"><img class="img-fluid" src="{{asset('public/frontend/img/bannerGT.jpg')}}" title="#caption2" alt="Slideshow image">
-                                    </a>
-                                </div>
-                                <div class="col-lg-3 col-md-6 col-sm-12">
-                                    <div class="item">
-                                        <div class="item-img"><a href="#" title=""><img class="img-fluid"
-                                                    src="img/intro-blue-icon4.png" alt="img"></a></div>
-                                        <div class="item-content">
-                                            <div class="sub-title">
-                                                <h4>Biologically Safe</h4>
+
+
+
+
+
+<div class="section blog-news">
+                <div class="container">
+
+                    <div class="feature-products tab-content">
+
+                        <!-- List -->
+                      {{--   <div id="list" class="tab-pane active"> --}}
+                            <div class="block-content m-top">
+                                <div  style="display: flex; flex-wrap: wrap;">
+                                @foreach($vp as $key=>$vp)
+
+                                        <div class="row" style="margin-bottom: 50px; width: 32%;height: 10rem;
+                                        box-shadow: 1px 1px 3px 0px rgb(0 0 0 / 20%), 0 1px 0 rgb(0 0 0 / 20%), inset 0 0 0 1px rgb(0 0 0 / 5%); margin-left: 1.5rem;cursor: pointer;" href="#">
+
+
+                                            <div class="col-md-5 col-sm-12" style="max-width: 15rem">
+                                                <div class="product-thumb">
+                                                    <div class="product-container ">
+                                                        <div class="product-image-container">
+                                                            <a class="product-img-link" href="{{URL::to('chi-tiet-vpcc/'.$vp->ID_VPCC)}}" title=""><img src="{{asset('public/frontend/img/logo.jpg')}}" alt="img" style="width: 8rem; height: 8rem">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit felis euismod
-                                                sempe.</p>
+                                            <div  style="width: 50% ; margin-top: 2rem">
+                                                <div class="content-right" style="color: black">
+                                                    <a href="{{URL::to('chi-tiet-vpcc/'.$vp->ID_VPCC)}}" style="font-family: emoji; color: black; font-size: 18px">Văn phòng công chứng
+                                                        {{$vp->TEN_VPCC}}</a>
+
+                                                </div>
+                                            </div>
+
+
                                         </div>
-                                    </div>
+
+
+                                 @endforeach
+
                                 </div>
-                            </div> --}}
-                        {{-- </div>
-                        </div> --}}
+
+
+                            </div>
+
+                    </div>
+
+                    {{-- <div style="margin-left: 30rem">
+
+                            {{ $vp->links("pagination::bootstrap-4") }}
+
+
+                    </div> --}}
+                </div>
+            </div>
+
+
                     </div>
                 </div>
 
@@ -276,72 +312,8 @@
             </section>
 
 
-{{-- <section>
-                <div class="section tiva-slideshow-wrapper">
-                    <div id="tiva-slideshow" class="nivoSlider"><a href="#" title="Slideshow image"><img
-                                class="img-fluid" src="{{asset('public/frontend/img/banner.jpg')}}" title="#caption1"
-                                alt="Slideshow image"></a><a href="#" title="Slideshow image"><img class="img-fluid"
-                                src="{{asset('public/frontend/img/sodotochuc.jpg')}}" title="#caption2" alt="Slideshow image"></a></div>
-                    <div id="caption1" class="nivo-html-caption hidden-sm hidden-xs d-none col-lg-block">
-                        <div class="tiva-caption m-left">
-                            <div class="left-right hidden-xs"><span class="font-stre ">We introduction</span></div>
-                            <div class="right-left hidden-xs normal very_large_60">
-                                <h3>Oars Organic</h3>
-                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur. Cras mattis
-                                    consectetur purus sit fermentum.</p>
-                            </div>
-                            <div class="Praesent"></div>
-                            <div class="right-left hidden-xs slow disciver-now"><a
-                                    class="btn button btn-green button-main" href="blog-list-right-sidebar.html"
-                                    title="Shop now">learn more</a></div>
-                            <div class="right-left hidden-xs slow disciver-now"><a class="btn button button-main"
-                                    href="blog-list-right-sidebar.html" title="Shop now">purchase now</a></div>
-                        </div>
-                    </div>
-                    <div id="caption2" class="nivo-html-caption hidden-sm hidden-xs d-none col-lg-block">
-                        <div class="tiva-caption m-right">
-                            <div class="left-right hidden-xs"><span class="font-stre ">We introduction</span></div>
-                            <div class="roll hidden-xs normal very_large_60">
-                                <h3>Oars Organic</h3>
-                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur. Cras mattis
-                                    consectetur purus sit fermentum.</p>
-                            </div>
-                            <div class="right-left hidden-xs slow disciver-now"><a
-                                    class="btn button btn-green button-main" href="blog-list-right-sidebar.html"
-                                    title="Shop now">learn more</a></div>
-                            <div class="right-left hidden-xs slow disciver-now"><a class="btn button button-main"
-                                    href="blog-list-right-sidebar.html" title="Shop now">purchase now</a></div>
-                        </div>
-                    </div>
-                </div>
-            </section> --}}
 
 
-<div class="section tiva-slideshow-wrapper">
-    <div id="tiva-slideshow" class="nivoSlider">
-        <a href="#" title="Slideshow image"><img class="img-fluid" src="{{asset('public/frontend/img/banner.jpg')}}" title="#caption1" alt="Slideshow image" >
-        </a>
-        {{-- <a href="#" title="Slideshow image"><img class="img-fluid" src="{{asset('public/frontend/img/slideshow/banner1.jpg')}}" title="#caption2" alt="Slideshow image">
-        </a> --}}
-    </div>
-     <div id="caption1" class="nivo-html-caption hidden-sm hidden-xs d-none col-lg-block">
-        <div class="tiva-caption m-left">
-            {{-- <div class="left-right hidden-xs"><span class="font-stre ">Cửa hàng của chúng tôi</span>
-            </div> - --}}
-            <div class="right-left hidden-xs normal very_large_60" style="margin-top: 500px">
-                <h3 style="color: white; font-family: 'Flaticon'">Hội công chứng viên Cần Thơ</h3>
-                {{-- <p style="color: white">Chuyên cung cấp thực phẩm tươi ngon, an toàn, chất lượng uy tính, giá cả hợp lý.</p> --}}
-            </div>
-            <div class="Praesent"></div>
-
-
-
-            <li style="width: 1200px; height: 30px;padding-left: 400px;padding-top: 450px; line-height: 30px; color: white;font-size: 25px"><marquee behavior="" direction="left" scrollamount="3" >Chào mừng Bạn đến với Trang thông tin điện tử của Hội Công chứng viên thành phố Cần Thơ.</marquee></li>
-
-        </div>
-    </div>
-
-</div>
 
 
 @endsection

@@ -68,6 +68,9 @@
 
                                      <p>{!!$vb->NOIDUNG_VB!!}</p>
 
+                                     <br>
+                                     <p style="color: #b36b00; font-size: 16px">Download: <a href="{{asset('public/upload'.$vb->FILE_VB)}}" style="color: #0059b3"> tài liệu</a></p>
+
                                      @endforeach
                                 </div>
                             </div>

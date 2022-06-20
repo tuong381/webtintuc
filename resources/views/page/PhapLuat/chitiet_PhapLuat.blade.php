@@ -82,7 +82,7 @@
                                     <!-- Latest Posts -->
                                     <div class="sidebar-block blogs-recent">
                                         <div class="sub-title">
-                                            <h3>Tin liên quan</h4>
+                                            <h3>Pháp luật liên quan</h4>
                                         </div>
                                         <div class="recent-article">
                                             <div class="ra-item-inner">

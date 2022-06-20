@@ -256,7 +256,25 @@
                                             <div class="about-logo"><a href="#" title=""><img class="img-fluid"
                                                         src="img/logo.png" alt></a></div>
                                             <div class="about-content">
-                                                <p>Cảm ơn quý khách đã ghé cửa hàng của chúng tôi. Cửa hàng chúng tôi luôn cung cấp những sản phẩm tươi ngon, đảm bảo an toàn thực phẩm.</p>
+
+                                                    {{-- $con=new mysqli("localhost","root","","webtintuc");
+                                                    $con->set_charset("utf8"); --}}
+
+
+                                                    {{--
+                                                 <?php
+
+                                                $sl1="UPDATE `thongkeslx` SET `luotxem`=`luotxem`+1 ";
+                                                        mysqli_query($con, $sl1);
+                                                        $sl2="SELECT * FROM thongkeslx";
+                                                        $kq = mysqli_query($con, $sl2);
+                                                        $d = mysqli_fetch_array($kq);
+                                                        <?php echo $d[luotxem];?>
+                                                ?> --}}
+                                                {{-- @foreach($xem as $key=>$xem)
+                                                 <div>Luot truy cap: {{$xem->luotxem}}</div>
+                                                @endforeach --}}
+                                                {{-- <p>Cảm ơn quý khách đã ghé cửa hàng của chúng tôi. Cửa hàng chúng tôi luôn cung cấp những sản phẩm tươi ngon, đảm bảo an toàn thực phẩm.</p> --}}
                                             </div>
 
                                         </div>
