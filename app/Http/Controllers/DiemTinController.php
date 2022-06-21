@@ -18,6 +18,7 @@ class DiemTinController extends Controller
 
     /// khach hang
     public function show_ChuyenMucDT($ID_CHUYENMUC_DT){
+        $lienket= DB::table('lienketwebsite')->get();
 
         $chuyenmucdiemtin=DB::table('chuyenmucdiemtin')->orderby('ID_CHUYENMUC_DT','desc')->get();
 
@@ -35,10 +36,11 @@ class DiemTinController extends Controller
 
 
         return view('page.DiemTin.CM_DiemTin')->with('chuyenmuc_ten',$chuyenmuc_ten)
-                ->with('chuyenmucdiemtin',$chuyenmucdiemtin)->with('danhmuc',$danhmuc);
+                ->with('chuyenmucdiemtin',$chuyenmucdiemtin)->with('danhmuc',$danhmuc)->with('lienket', $lienket);
     }
 
     public function show_ChiTietDT ($ID_DT ){
+        $lienket= DB::table('lienketwebsite')->get();
 
          $diemtin=DB::table('diemtin')
                     ->join('chuyenmucdiemtin','chuyenmucdiemtin.ID_CHUYENMUC_DT','=','diemtin.ID_CHUYENMUC_DT')
@@ -59,7 +61,7 @@ class DiemTinController extends Controller
                           ->limit(5)->get();
 
          return view('page.DiemTin.chitiet_DiemTin') ->with('diemtin',$diemtin)
-                ->with('chuyenmuc_ten',$chuyenmuc_ten)
+                ->with('chuyenmuc_ten',$chuyenmuc_ten)->with('lienket', $lienket)
                 ->with('DT_lienquan',$DT_lienquan);
 }
 

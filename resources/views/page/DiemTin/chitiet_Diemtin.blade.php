@@ -20,7 +20,7 @@
                     @endforeach
                     <li class="breadcrumb-sep">/</li>
                     @foreach($diemtin as $key=>$dt)
-                    <li><span style="font-family: 'FontAwesome'; color: #ffff00">{{$dt->TIEUDE_DT}}</span>
+                    <li><span style="font-family: 'FontAwesome'; color: #10550c">{{$dt->TIEUDE_DT}}</span>
                     </li>
                     @endforeach
                 </ul>

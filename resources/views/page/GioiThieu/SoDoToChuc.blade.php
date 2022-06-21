@@ -48,7 +48,7 @@
 
             <div class="section wrap-product-categories" style="margin-bottom: 1px; color: black">
 
-                <img src="{{asset('public/frontend/img/sodotochuc.jpg')}}" style="width: 70rem; height: 50rem;">
+                <img src="{{asset('public/frontend/img/sodotochuc.png')}}" style="width: 70rem; height: 50rem;">
 
              </div>
 

@@ -42,7 +42,7 @@
                                         </div>
                                     </div> --}}
                                     <div class="right-left hidden-xs slow disciver-now" class="dd" >
-                                        <a class="btn button button-main" style="background-color: #c4851a" href="{{URL::to('chuyen-muc-van-ban/'.$chuyenmuc->ID_CHUYENMUC_VB)}}">{{$chuyenmuc->TEN_CHUYENMUC_VB}}</a>
+                                        <a class="btn button button-main" style="background-color:#1e551e" href="{{URL::to('chuyen-muc-van-ban/'.$chuyenmuc->ID_CHUYENMUC_VB)}}">{{$chuyenmuc->TEN_CHUYENMUC_VB}}</a>
                                      </div>
                                 </div>
                                 @endforeach

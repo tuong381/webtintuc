@@ -97,8 +97,8 @@
 
                                             </li>
 
-                                            <li class="dropdown"><a href="{{URL::to('phap-luat')}}">Pháp luật</a>
-                                            </li>
+                                            {{-- <li class="dropdown"><a href="{{URL::to('phap-luat')}}">Pháp luật</a>
+                                            </li> --}}
 
                                             <li class="dropdown ">
 
@@ -113,6 +113,7 @@
 
                                                         <li><a href="{{URL::to('/danh-sach-hoi-vien')}}">Danh sách hội viên</a></li>
                                                         <li><a href="{{URL::to('/danh-sach-vpcc')}}">Danh sách VPCC</a></li>
+                                                        <li><a href="{{URL::to('bieu-mau-ccv')}}">Biểu mẫu CCV</a></li>
 
 
                                                     </ul>
@@ -122,7 +123,7 @@
 
                                             </li>
 
-                                            <li class="dropdown"><a href="{{URL::to('Lien-he')}}">Thư viện </a>
+                                            <li class="dropdown"><a href="{{URL::to('/thu-vien')}}">Thư viện </a>
 
                                             </li>
 
@@ -137,7 +138,7 @@
 
                                     <div class="header-block search-block popup-over pull-right">
                                         <div data-toggle="dropdown" class="popup-title"><a href="#" title="Search">
-                                            <i class="flaticon-search" style="color: #915e09"></i></a></div>
+                                            <i class="flaticon-search" style="color: #1e551e"></i></a></div>
                                         <div class="popup-content">
                                             <form {{-- id="searchbox" --}} action="{{URL::to('/tim-kiem')}}"
                                                  method="post">
@@ -146,7 +147,7 @@
                                                         type="text" name="tu_timkiem" placeholder="Nhập từ tìm kiếm" value=""
                                                         autocomplete="off">
                                                     <div class="input-group-btn">
-                                                        <button type="submit" name="submit_search" class="btn button btn-default float-right" style="background-color: #b36b00">Search</button>
+                                                        <button type="submit" name="submit_search" class="btn button btn-default float-right" style="background-color: #1e551e">Search</button>
                                                     </div>
 
 
@@ -177,7 +178,7 @@
         <footer>
             <div class="footer">
 
-                <div class="newsletter" style="background-color: #9a8663">
+                <div class="newsletter" style="background-color: #1e551e">
 
                     <div class="container">
                         <div class="row">
@@ -225,7 +226,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-3 col-md-6 col-sm-6 mg-bottom-30">
+                            <div class="col-lg-3 col-md-6 col-sm-6 mg-bottom-30" style="margin-left: 4rem">
                                 <div class="item contact-us">
                                     <div class="item-content">
                                         <div class="sub-title">
@@ -239,7 +240,7 @@
                                             <input class="search-query form-control"
                                                         type="text" name="EMAIL_KHACH" placeholder="Email" autocomplete="off">
                                                 <div class="input-group-btn">
-                                                    <button type="submit" name="submit_search" class="btn button btn-default float-right" style="background-color: #b36b00">Đăng ký</button>
+                                                    <button type="submit" name="submit_search" class="btn button btn-default float-right" style="background-color: #1e551e">Đăng ký</button>
                                                 </div>
 
                                         </div>
@@ -249,36 +250,37 @@
                                 </div>
                             </div>`
 
-                            <div class="col-lg-4 col-md-6 col-sm-6" style="margin-left: 5rem">
-                                <div class="about-layout">
-                                    <div class="group">
-                                        <div class="group-inner  text-center">
-                                            <div class="about-logo"><a href="#" title=""><img class="img-fluid"
-                                                        src="img/logo.png" alt></a></div>
-                                            <div class="about-content">
-
-                                                    {{-- $con=new mysqli("localhost","root","","webtintuc");
-                                                    $con->set_charset("utf8"); --}}
-
-
-                                                    {{--
-                                                 <?php
-
-                                                $sl1="UPDATE `thongkeslx` SET `luotxem`=`luotxem`+1 ";
-                                                        mysqli_query($con, $sl1);
-                                                        $sl2="SELECT * FROM thongkeslx";
-                                                        $kq = mysqli_query($con, $sl2);
-                                                        $d = mysqli_fetch_array($kq);
-                                                        <?php echo $d[luotxem];?>
-                                                ?> --}}
-                                                {{-- @foreach($xem as $key=>$xem)
-                                                 <div>Luot truy cap: {{$xem->luotxem}}</div>
-                                                @endforeach --}}
-                                                {{-- <p>Cảm ơn quý khách đã ghé cửa hàng của chúng tôi. Cửa hàng chúng tôi luôn cung cấp những sản phẩm tươi ngon, đảm bảo an toàn thực phẩm.</p> --}}
-                                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6 mg-bottom-30" style="margin-left: 4rem">
+                                <div class="item contact-us">
+                                    <div class="item-content">
+                                        <div class="sub-title">
+                                            <h4 class="title-black">Liên kết hữu ích</h4>
 
                                         </div>
+                                    <form method="post" action="{{URL::to('/dang-ky-nhan-tin')}}" class="new-review-form" enctype="multipart/form-data">
+                                    {{csrf_field()}}
+
+                                        <div class="input-group">
+                                                 <select class="form-control " id="lien-ket" style="color: #8b8b99" >
+                                                        <option value="" style="color: #8b8b99"  >-- Liên kết hữu ích --</option>
+                                                        @foreach($lienket as $key=>$lk)
+
+                                                        <option value="{{$lk->LINK_LKWEB}}">
+
+                                                            {{$lk->TEN_LKWEB}}
+
+                                                        </option>
+
+                                                        @endforeach
+
+
+                                                 </select>
+
+
+                                        </div>
+                                    </form>
                                     </div>
+
                                 </div>
                             </div>
 
@@ -339,6 +341,18 @@
  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
+  <script>
+    $(function(){
+      // bind change event to select
+      $('#lien-ket').on('change', function () {
+          var url = $(this).val(); // get selected value
+          if (url) { // require a URL
+              window.location = url; // redirect
+          }
+          return false;
+      });
+    });
+</script>
 
 
 

@@ -16,7 +16,7 @@
                     <li class="breadcrumb-sep">/</li>
 
                     @foreach($chuyenmuc_ten as $key=>$dt)
-                    <li><span style="font-family: 'FontAwesome'; color: #ffff00">{{$dt->TEN_CHUYENMUC_DT}}</span>
+                    <li><span style="font-family: 'FontAwesome'; color: #10550c">{{$dt->TEN_CHUYENMUC_DT}}</span>
                     </li>
                     @endforeach
                 </ul>

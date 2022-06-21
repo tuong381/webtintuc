@@ -6,7 +6,7 @@
 
 <div class="section tiva-slideshow-wrapper">
     <div id="tiva-slideshow" class="nivoSlider">
-        <a href="#" title="Slideshow image"><img class="img-fluid" src="{{asset('public/frontend/img/banner.jpg')}}" title="#caption1" alt="Slideshow image" >
+        <a href="#" title="Slideshow image"><img class="img-fluid" src="{{asset('public/frontend/img/bannerTC.jpg')}}" title="#caption1" alt="Slideshow image" >
         </a>
         {{-- <a href="#" title="Slideshow image"><img class="img-fluid" src="{{asset('public/frontend/img/slideshow/banner1.jpg')}}" title="#caption2" alt="Slideshow image">
         </a> --}}
@@ -16,7 +16,7 @@
             {{-- <div class="left-right hidden-xs"><span class="font-stre ">Cửa hàng của chúng tôi</span>
             </div> - --}}
             <div class="right-left hidden-xs normal very_large_60" style="margin-top: 500px">
-                <h3 style="color: white; font-family: 'Flaticon'">Hội công chứng viên Cần Thơ</h3>
+                <h3 style="color: #334d4d; font-family: 'Flaticon'">Hội công chứng viên Cần Thơ</h3>
                 {{-- <p style="color: white">Chuyên cung cấp thực phẩm tươi ngon, an toàn, chất lượng uy tính, giá cả hợp lý.</p> --}}
             </div>
             <div class="Praesent"></div>
@@ -111,7 +111,7 @@
 
 <section>
 
-<div class="oars-store sm-text-center pd-top-bottom" style="background-color: #eeebe7">
+<div class="oars-store sm-text-center pd-top-bottom" style="background-color: #ecf8f2">
 
     <div class="section about">
         <div class="container">
@@ -153,8 +153,9 @@
                                             </div>
                                             <div class="item-content" style="float: inherit">
                                                 <div class="sub-title">
+                                                <a href="{{URL::to('chi-tiet-van-ban/'.$vb->ID_VB)}}">
                                                     <h4 class="no-ater" style="font-size: 18px; font-family: 'FontAwesome'">{{$vb->TIEUDE_VB}}</h4>
-
+                                                </a>
                                                 </div>
                                             </div>
                                         </div>

@@ -15,6 +15,7 @@ class VanBanController extends Controller
 {
      /// khach hang
     public function show_ChuyenMucVB($ID_CHUYENMUC_VB){
+        $lienket= DB::table('lienketwebsite')->get();
 
         $chuyenmucvanban=DB::table('chuyenmucvanban')->orderby('ID_CHUYENMUC_VB','desc')->get();
 
@@ -33,10 +34,11 @@ class VanBanController extends Controller
 
 
         return view('page.vanban.CM_vanban')->with('chuyenmuc_ten',$chuyenmuc_ten)
-                ->with('chuyenmucvanban',$chuyenmucvanban)->with('danhmuc',$danhmuc);
+                ->with('chuyenmucvanban',$chuyenmucvanban)->with('danhmuc',$danhmuc)->with('lienket', $lienket);
     }
 
     public function show_ChiTietVB($ID_VB ){
+        $lienket= DB::table('lienketwebsite')->get();
 
          $vanban=DB::table('vanban')
                     ->join('chuyenmucvanban','chuyenmucvanban.ID_CHUYENMUC_VB','=','vanban.ID_CHUYENMUC_VB')
@@ -58,6 +60,6 @@ class VanBanController extends Controller
 
          return view('page.VanBan.chitiet_VanBan') ->with('vanban',$vanban)
                 ->with('chuyenmuc_ten',$chuyenmuc_ten)
-                ->with('VB_lienquan',$VB_lienquan);
+                ->with('VB_lienquan',$VB_lienquan)->with('lienket', $lienket);
 }
 }

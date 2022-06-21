@@ -15,6 +15,7 @@ class HoiVienController extends Controller
 {
     //
     public function show_ChiTietVPCC($ID_VPCC ){
+        $lienket= DB::table('lienketwebsite')->get();
 
          $vpcc=DB::table('vanphongcongchung')
                      ->where('vanphongcongchung.ID_VPCC',$ID_VPCC)
@@ -25,6 +26,6 @@ class HoiVienController extends Controller
 
 
          return view('page.HoiVien.chitiet_VPCC') ->with('vpcc',$vpcc)
-                ->with('ten',$ten);
+                ->with('ten',$ten)->with('lienket', $lienket);
 }
 }

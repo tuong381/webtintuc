@@ -63,16 +63,13 @@
                  <div class="block-content m-top">
                         <div class="row">
                             <div class="col-md-9 col-sm-12 m-b-50">
+                                 @foreach($vanban as $key=>$vb)
                                 <div class="row" style="margin-right: 3rem">
-                                    @foreach($vanban as $key=>$vb)
-
                                      <p>{!!$vb->NOIDUNG_VB!!}</p>
 
-                                     <br>
-                                     <p style="color: #b36b00; font-size: 16px">Download: <a href="{{asset('public/upload'.$vb->FILE_VB)}}" style="color: #0059b3"> tài liệu</a></p>
-
-                                     @endforeach
                                 </div>
+                                <h3 style="color: #b36b00; font-size: 16px">Download: <a href="{{asset('public/upload'.$vb->FILE_VB)}}" style="color: #0059b3"> tài liệu</a></h3>
+                                 @endforeach
                             </div>
                             <div class="col-md-3 col-sm-12">
                                 <div class="sidebar sidebar-collection">

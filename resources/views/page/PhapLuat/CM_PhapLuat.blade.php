@@ -11,12 +11,16 @@
             </div>
             <div class="breadcrumbs-container text-center">
                 <ul class="breadcrumbs primary-font">
-                    <li><a href="#"><span style="font-family: 'FontAwesome'; color: white">Pháp luật</span></a>
+                    <li><a href="#"><span style="font-family: 'FontAwesome'; color: black">Thư viện</span></a>
+                    </li>
+                    <li class="breadcrumb-sep">/</li>
+
+                    <li><a href="#"><span style="font-family: 'FontAwesome'; color: black">Pháp luật</span></a>
                     </li>
                     <li class="breadcrumb-sep">/</li>
 
                     @foreach($chuyenmuc_ten as $key=>$pl)
-                    <li><span style="font-family: 'FontAwesome'; color: #ffff00">{{$pl->TEN_CHUYENMUC_PL}}</span>
+                    <li><span style="font-family: 'FontAwesome'; color: #1e551e">{{$pl->TEN_CHUYENMUC_PL}}</span>
                     </li>
                     @endforeach
                 </ul>

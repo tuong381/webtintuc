@@ -16,6 +16,7 @@ class PhapLuatController extends Controller
     //
       /// khach hang
     public function show_ChuyenMucPL($ID_CHUYENMUC_PL){
+        $lienket= DB::table('lienketwebsite')->get();
 
         $chuyenmucphapluat=DB::table('chuyenmucphapluat')->orderby('ID_CHUYENMUC_PL','desc')->get();
 
@@ -37,10 +38,12 @@ class PhapLuatController extends Controller
 
 
         return view('page.PhapLuat.CM_PhapLuat')->with('chuyenmuc_ten',$chuyenmuc_ten)
-                ->with('chuyenmucphapluat',$chuyenmucphapluat)->with('danhmuc',$danhmuc);
+                ->with('chuyenmucphapluat',$chuyenmucphapluat)->with('danhmuc',$danhmuc)
+                ->with('lienket', $lienket);
     }
 
     public function show_ChiTietPL($ID_PL ){
+        $lienket= DB::table('lienketwebsite')->get();
 
          $phapluat=DB::table('phapluat')
                     ->join('chuyenmucphapluat','chuyenmucphapluat.ID_CHUYENMUC_PL','=','phapluat.ID_CHUYENMUC_PL')
@@ -62,6 +65,6 @@ class PhapLuatController extends Controller
 
          return view('page.PhapLuat.chitiet_PhapLuat') ->with('phapluat',$phapluat)
                 ->with('chuyenmuc_ten',$chuyenmuc_ten)
-                ->with('PL_lienquan',$PL_lienquan);
+                ->with('PL_lienquan',$PL_lienquan)->with('lienket', $lienket);
 }
 }

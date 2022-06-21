@@ -38,7 +38,7 @@
                                     font-weight: 600;
                                     font-size: 30px;
                                     font-family: UTM-COPPERPLATE;
-                                     ">QUYẾT ĐỊNH THÀNH LẬP HIỆP HỘI CÔNG CHỨNG VIÊN CẦN THƠ </h2>
+                                     ">QUYẾT ĐỊNH THÀNH LẬP HỘI CÔNG CHỨNG VIÊN CẦN THƠ </h2>
 
                         <br>
                     {{-- </div> --}}

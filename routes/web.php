@@ -70,3 +70,12 @@ Route::post('/tim-kiem','App\Http\Controllers\HomeController@timkiem' );
 
 // dang ky nhan tin
 Route::post('dang-ky-nhan-tin','App\Http\Controllers\HomeController@dkNhanTin' );
+
+
+// thu vien
+Route::get('thu-vien','App\Http\Controllers\HomeController@thuvien' );
+
+//  bieu mau
+Route::get('bieu-mau-ccv','App\Http\Controllers\HomeController@bieumau' );
+
+Route::get('chuyen-muc-thu-vien/{ID_CHUYENMUC_PL}','App\Http\Controllers\HomeController@video' );

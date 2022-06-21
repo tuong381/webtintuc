@@ -11,16 +11,20 @@
             </div>
             <div class="breadcrumbs-container text-center">
                 <ul class="breadcrumbs primary-font">
-                    <li><a href="{{URL::to('/trang-chu')}}"><span style="font-family: 'FontAwesome'; color: white">Pháp luật</span></a>
+                    <li><a href="#"><span style="font-family: 'FontAwesome'; color: black">Thư viện</span></a>
+                    </li>
+                    <li class="breadcrumb-sep">/</li>
+
+                    <li><a href="#"><span style="font-family: 'FontAwesome'; color: black">Pháp luật</span></a>
                     </li>
                     <li class="breadcrumb-sep">/</li>
                     @foreach($chuyenmuc_ten as $key=>$chuyenmuc)
-                    <li><span style="font-family: 'FontAwesome'; color: white">{{$chuyenmuc->TEN_CHUYENMUC_PL}}</span>
+                    <li><span style="font-family: 'FontAwesome'; color: black">{{$chuyenmuc->TEN_CHUYENMUC_PL}}</span>
                     </li>
                     @endforeach
                     <li class="breadcrumb-sep">/</li>
                     @foreach($phapluat as $key=>$pl)
-                    <li><span style="font-family: 'FontAwesome'; color: #ffff00">{{$pl->TIEUDE_PL}}</span>
+                    <li><span style="font-family: 'FontAwesome'; color: #1e551e">{{$pl->TIEUDE_PL}}</span>
                     </li>
                     @endforeach
                 </ul>
@@ -81,7 +85,7 @@
 
                                     <!-- Latest Posts -->
                                     <div class="sidebar-block blogs-recent">
-                                        <div class="sub-title">
+                                        <div class="sub-title" style="width: 18rem">
                                             <h3>Pháp luật liên quan</h4>
                                         </div>
                                         <div class="recent-article">
