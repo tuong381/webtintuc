@@ -11,7 +11,7 @@
             </div>
             <div class="breadcrumbs-container text-center">
                 <ul class="breadcrumbs primary-font">
-                    <li><a href="{{URL::to('/trang-chu')}}"><span style="font-family: 'FontAwesome'; color: white">Văn bản</span></a>
+                    <li><a href="#"><span style="font-family: 'FontAwesome'; color: white">Văn bản</span></a>
                     </li>
                     <li class="breadcrumb-sep">/</li>
                     @foreach($chuyenmuc_ten as $key=>$chuyenmuc)
@@ -20,7 +20,7 @@
                     @endforeach
                     <li class="breadcrumb-sep">/</li>
                     @foreach($vanban as $key=>$vb)
-                    <li><span style="font-family: 'FontAwesome'; color: #ffff00">{{$vb->TIEUDE_VB}}</span>
+                    <li><span style="font-family: 'FontAwesome'; color: #10550c">{{$vb->TIEUDE_VB}}</span>
                     </li>
                     @endforeach
                 </ul>

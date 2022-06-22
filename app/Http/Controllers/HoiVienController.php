@@ -28,4 +28,18 @@ class HoiVienController extends Controller
          return view('page.HoiVien.chitiet_VPCC') ->with('vpcc',$vpcc)
                 ->with('ten',$ten)->with('lienket', $lienket);
 }
+
+    public function timkiem(Request $request){
+      $lienket= DB::table('lienketwebsite')->get();
+
+        $tu_timkiem = $request->tu_timkiem;
+
+        $timkiem_BM = DB::table('bieumauccv')->where('TEN_BMCCV','like','%'.$tu_timkiem.'%')->get();
+
+
+        return view('page.HoiVien.TimKiemBM')->with('timkiem_BM',$timkiem_BM)
+            ->with('tu_timkiem',$tu_timkiem)->with('lienket', $lienket) ;
+
+    }
+
 }

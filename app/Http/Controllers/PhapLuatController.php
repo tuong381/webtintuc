@@ -67,4 +67,17 @@ class PhapLuatController extends Controller
                 ->with('chuyenmuc_ten',$chuyenmuc_ten)
                 ->with('PL_lienquan',$PL_lienquan)->with('lienket', $lienket);
 }
+
+    public function timkiem(Request $request){
+      $lienket= DB::table('lienketwebsite')->get();
+
+        $tu_timkiem = $request->tu_timkiem;
+
+        $timkiem_PL = DB::table('phapluat')->where('TIEUDE_PL','like','%'.$tu_timkiem.'%')->get();
+
+
+        return view('page.PhapLuat.TimKiemPL')->with('timkiem_PL',$timkiem_PL)
+            ->with('tu_timkiem',$tu_timkiem)->with('lienket', $lienket) ;
+
+    }
 }

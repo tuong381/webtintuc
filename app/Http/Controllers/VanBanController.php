@@ -24,7 +24,7 @@ class VanBanController extends Controller
         $danhmuc= DB::table('vanban')
                     ->join('chuyenmucvanban','chuyenmucvanban.ID_CHUYENMUC_VB','=','vanban.ID_CHUYENMUC_VB')
                     ->where('chuyenmucvanban.ID_CHUYENMUC_VB',$ID_CHUYENMUC_VB )
-                    ->get();
+                    ->paginate(5);
 
 
         $chuyenmuc_ten= DB::table('chuyenmucvanban')
@@ -62,4 +62,17 @@ class VanBanController extends Controller
                 ->with('chuyenmuc_ten',$chuyenmuc_ten)
                 ->with('VB_lienquan',$VB_lienquan)->with('lienket', $lienket);
 }
+
+    public function timkiem(Request $request){
+      $lienket= DB::table('lienketwebsite')->get();
+
+        $tu_timkiem = $request->tu_timkiem;
+
+        $timkiem_VB = DB::table('vanban')->where('TIEUDE_VB','like','%'.$tu_timkiem.'%')->get();
+
+
+        return view('page.VanBan.TimKiemVB')->with('timkiem_VB',$timkiem_VB)
+            ->with('tu_timkiem',$tu_timkiem)->with('lienket', $lienket) ;
+
+    }
 }

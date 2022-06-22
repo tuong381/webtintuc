@@ -79,3 +79,12 @@ Route::get('thu-vien','App\Http\Controllers\HomeController@thuvien' );
 Route::get('bieu-mau-ccv','App\Http\Controllers\HomeController@bieumau' );
 
 Route::get('chuyen-muc-thu-vien/{ID_CHUYENMUC_PL}','App\Http\Controllers\HomeController@video' );
+
+// tim iem
+Route::post('/tim-kiem-van-ban','App\Http\Controllers\VanBanController@timkiem' );
+
+
+Route::post('/tim-kiem-phap-luat','App\Http\Controllers\PhapLuatController@timkiem' );
+
+
+Route::post('/tim-kiem-bieu-mau','App\Http\Controllers\HoiVienController@timkiem' );

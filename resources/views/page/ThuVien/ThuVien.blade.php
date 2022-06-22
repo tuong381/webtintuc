@@ -11,7 +11,7 @@
             </div>
             <div class="breadcrumbs-container text-center">
                 <ul class="breadcrumbs primary-font">
-                    <li><span style="font-family: 'FontAwesome';color: black">Thư viện</span>
+                    <li><span style="font-family: 'FontAwesome';color: #10550c">Thư viện</span>
                     </li>
                 </ul>
             </div>

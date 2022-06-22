@@ -11,7 +11,7 @@
             </div>
             <div class="breadcrumbs-container text-center">
                 <ul class="breadcrumbs primary-font">
-                    <li><a href="#"><span style="font-family: 'FontAwesome'; color: #ffff00">Liên hệ</span></a>
+                    <li><a href="#"><span style="font-family: 'FontAwesome'; color: #10550c">Liên hệ</span></a>
                     </li>
                 </ul>
             </div>
@@ -36,7 +36,7 @@
                     <div class="row">
                         <div class="col-md-7 col-sm-12 m-b-30">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.8940828131103!2d105.77233731474239!3d10.025598592833598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0882448a2ce97%3A0x8293e26834af4852!2zMWEgVHLhuqduIEtow6FuaCBExrAsIFh1w6JuIEtow6FuaCwgTmluaCBLaeG7gXUsIEPhuqduIFRoxqEsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1655392201902!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            {{-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.858228303052!2d105.76883821474253!3d10.028555792831622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a088239f6f03f9%3A0x2862ae96b70e4905!2zxJAuIDMvMiwgWHXDom4gS2jDoW5oLCBOaW5oIEtp4buBdSwgQ-G6p24gVGjGoSwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1637414215062!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> --}}
+
                         </div>
                         <div class="col-md-5 col-sm-12">
 
@@ -61,11 +61,7 @@
 
                                 <div class="col padding-0">
                                     <div class="item d-flex">
-                                        {{-- <div class="item-left">
-                                            <div class="icon"><i class="fa fa-map-marker"
-                                                aria-hidden="true"></i>
-                                            </div>
-                                        </div> --}}
+
                                         <div class="contact-content">
 
                                             <p style=" font-size: 20px; font-family: 'Flaticon';"> Địa chỉ:
@@ -75,11 +71,7 @@
                                 </div>
                                 <div class="col padding-0">
                                     <div class="item d-flex">
-                                        {{-- <div class="item-left">
-                                            <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i>
 
-                                            </div>
-                                        </div> --}}
                                         <div class="item-right">
                                             <p style=" font-size: 20px; font-family: 'Flaticon';">
                                                Số điện thoại: 02923.832.213</p>
@@ -88,10 +80,7 @@
                                 </div>
                                 <div class="col padding-0">
                                     <div class="item d-flex last">
-                                       {{--  <div class="item-left">
-                                            <div class="icon"><i class="fa fa-paper-plane" aria-hidden="true"></i>
-                                            </div>
-                                        </div> --}}
+
                                         <div class="item-right">
                                             <p style=" font-size: 20px; font-family: 'Flaticon';">
                                                Email: hoicongchungct@gmail.com</p>

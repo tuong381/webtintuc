@@ -11,10 +11,7 @@
             </div>
             <div class="breadcrumbs-container text-center">
                 <ul class="breadcrumbs primary-font">
-                    <li><span style="font-family: 'FontAwesome'; color: white">Hội viên</span>
-                    </li>
-                    <li class="breadcrumb-sep">/</li>
-                    <li><a href="#"><span style="font-family: 'FontAwesome'; color: #10550c">Biểu mẫu CCV</span></a>
+                    <li><a href="#"><span style="font-family: 'FontAwesome'; color: #10550c">Kết quả tìm kiếm</span></a>
                     </li>
                     </li>
                 </ul>
@@ -27,29 +24,10 @@
 <div class="section product-default-item">
                 <div class="container">
 
-                     <div class="title-default d-flex justify-content-between w-100 flex-wrap" style="margin-left: 57rem">
+                    <h4 style="font-family: MYRIADPRO-LIGHT; color: #9f6605; margin-bottom: 2rem;">
+                        Có {{count($timkiem_BM)}} kết quả chứa từ khóa "{{$tu_timkiem}}"
+                    </h4>
 
-
-                     <div class="content-right d-flex align-items-center justify-content-end" >
-                            <div class="popup-content">
-                                            <form {{-- id="searchbox" --}} action="{{URL::to('/tim-kiem-bieu-mau')}}"
-                                                 method="post">
-                                                 {{csrf_field()}}
-                                                <div class="input-group"><input class="search-query form-control"
-                                                        type="text" name="tu_timkiem" placeholder="Nhập từ tìm kiếm" value=""
-                                                        autocomplete="off">
-                                                    <div class="input-group-btn">
-                                                        <button type="submit" name="submit_search" class="btn button btn-default float-right" style="background-color: #1e551e"><i class="fa fa-search"></i></button>
-                                                    </div>
-
-
-
-                                                </div>
-                                            </form>
-                                        </div>
-                        </div>
-                    </div>
-                    <br><br>
 
                     <div class="feature-products tab-content">
 
@@ -57,7 +35,7 @@
                         <div id="list" class="tab-pane active">
                             <div class="product">
                                 <div class="item">
-                                    @foreach($bieumau as $key=>$bm)
+                                    @foreach($timkiem_BM as $key=>$bm)
                                     <div class="row" style="margin-bottom: 50px"  >
 
                                         <div >
@@ -89,13 +67,10 @@
                         </div>
                     </div>
 
-                    <div style="margin-left: 30rem">
 
-                            {{ $bieumau->links("pagination::bootstrap-4") }}
-
-
-                    </div>
                 </div>
             </div>
+
+
 
 @endsection

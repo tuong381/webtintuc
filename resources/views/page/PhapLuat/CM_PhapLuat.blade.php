@@ -11,11 +11,11 @@
             </div>
             <div class="breadcrumbs-container text-center">
                 <ul class="breadcrumbs primary-font">
-                    <li><a href="#"><span style="font-family: 'FontAwesome'; color: black">Thư viện</span></a>
+                    <li><a href="#"><span style="font-family: 'FontAwesome'; color:white">Thư viện</span></a>
                     </li>
                     <li class="breadcrumb-sep">/</li>
 
-                    <li><a href="#"><span style="font-family: 'FontAwesome'; color: black">Pháp luật</span></a>
+                    <li><a href="#"><span style="font-family: 'FontAwesome'; color: white">Pháp luật</span></a>
                     </li>
                     <li class="breadcrumb-sep">/</li>
 

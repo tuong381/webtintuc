@@ -19,7 +19,7 @@
 
                     <li class="breadcrumb-sep">/</li>
                     @foreach($ten as $key=>$ten)
-                    <li><span style="font-family: 'FontAwesome'; color: #ffff00">{{$ten->TEN_VPCC}}</span>
+                    <li><span style="font-family: 'FontAwesome'; color: #10550c">{{$ten->TEN_VPCC}}</span>
                     </li>
                     @endforeach
                 </ul>
@@ -45,7 +45,7 @@
                                 <img src="{{asset('public/frontend/img/logo.jpg')}}" alt="img" style="width: 8rem; height: 8rem">
 
                             </div>
-
+                            <br>
 
                             <div class="page-title color m-bottom-2">
                                 <div class="title title-icon">
@@ -72,7 +72,7 @@
                                         </div> --}}
                                         <div class="contact-content">
 
-                                            <p style=" font-size: 20px; font-family: 'Flaticon';"> {{$vp->THONGTIN_VPCC}}</p>
+                                            <p style=" font-size: 20px; font-family: 'Flaticon';"> {!!$vp->THONGTIN_VPCC!!}</p>
                                         </div>
                                     </div>
                                 </div>

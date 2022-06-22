@@ -110,7 +110,7 @@ class HomeController extends Controller
       $lienket= DB::table('lienketwebsite')->get();
 
 
-         $hoivien=DB::table('hoivien')->orderby('ID_HV','desc')->paginate(12);
+         $hoivien=DB::table('hoivien')->orderby('ID_HV','desc')->get();
         return view('page.HoiVien.HoiVien')->with('hoivien',$hoivien)->with('lienket', $lienket);
     }
 
@@ -193,7 +193,7 @@ class HomeController extends Controller
 
     public function bieumau(){
       $lienket= DB::table('lienketwebsite')->get();
-      $bieumau= DB::table('bieumauccv')->orderby('ID_BMCCV','desc')->get();
+      $bieumau= DB::table('bieumauccv')->orderby('ID_BMCCV','desc')->paginate(5);
 
         return view('page.HoiVien.BieuMau')->with('lienket', $lienket)->with('bieumau', $bieumau);
     }

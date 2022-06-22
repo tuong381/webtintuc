@@ -11,10 +11,10 @@
             </div>
             <div class="breadcrumbs-container text-center">
                 <ul class="breadcrumbs primary-font">
-                    <li><a href="{{URL::to('/trang-chu')}}"><span style="font-family: 'FontAwesome';color: #ffff00">Giới thiệu</span></a>
+                    <li><a href="{{URL::to('/trang-chu')}}"><span style="font-family: 'FontAwesome';color: white">Giới thiệu</span></a>
                     </li>
                     <li class="breadcrumb-sep">/</li>
-                    <li><span style="font-family: 'FontAwesome';color: #ffff00">Sơ đồ tổ chức</span>
+                    <li><span style="font-family: 'FontAwesome';color: #10550c">Sơ đồ tổ chức</span>
                     </li>
                 </ul>
             </div>

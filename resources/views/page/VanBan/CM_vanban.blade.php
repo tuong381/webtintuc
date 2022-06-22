@@ -16,7 +16,7 @@
                     <li class="breadcrumb-sep">/</li>
 
                     @foreach($chuyenmuc_ten as $key=>$vb)
-                    <li><span style="font-family: 'FontAwesome'; color: #ffff00">{{$vb->TEN_CHUYENMUC_VB}}</span>
+                    <li><span style="font-family: 'FontAwesome'; color: #10550c">{{$vb->TEN_CHUYENMUC_VB}}</span>
                     </li>
                     @endforeach
                 </ul>
@@ -121,7 +121,7 @@
 
                     <div style="margin-left: 30rem">
 
-                           {{--  {{ $chuyenmuc->links("pagination::bootstrap-4") }} --}}
+                            {{ $danhmuc->links("pagination::bootstrap-4") }}
 
 
                     </div>

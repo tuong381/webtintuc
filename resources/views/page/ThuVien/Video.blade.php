@@ -11,11 +11,11 @@
             </div>
             <div class="breadcrumbs-container text-center">
                 <ul class="breadcrumbs primary-font">
-                    <li><span style="font-family: 'FontAwesome';color: black">Thư viện</span>
+                    <li><span style="font-family: 'FontAwesome';color:white">Thư viện</span>
                     </li>
                     <li class="breadcrumb-sep">/</li>
                     @foreach($chuyenmuc_ten as $key=>$chuyenmuc)
-                    <li><span style="font-family: 'FontAwesome';color: #1e551e">{{$chuyenmuc->TEN_CHUYENMUC_TV}}</span>
+                    <li><span style="font-family: 'FontAwesome';color: #10550c">{{$chuyenmuc->TEN_CHUYENMUC_TV}}</span>
                     </li>
                     @endforeach
                 </ul>
@@ -76,7 +76,7 @@
                                 @foreach($thuvien as $key=>$tv)
 
                                         <div class="row" style="margin-bottom: 50px; width: 32%;height: 20rem;
-                                        box-shadow: 1px 1px 3px 0px rgb(0 0 0 / 20%), 0 1px 0 rgb(0 0 0 / 20%), inset 0 0 0 1px rgb(0 0 0 / 5%); margin-left: 1.5rem;cursor: pointer;" href="#">
+                                        margin-left: 1.5rem;cursor: pointer;" href="#">
 
                                             @if($tv->ID_CHUYENMUC_TV==1)
                                                 <img src="{{URL::to('public/upload/'.$tv->FILE_TV)}}" style="width: 22.5rem">
@@ -102,12 +102,12 @@
 
                     </div>
 
-                    {{-- <div style="margin-left: 30rem">
+                    <div style="margin-left: 30rem">
 
-                            {{ $vpcc->links("pagination::bootstrap-4") }}
+                            {{ $thuvien->links("pagination::bootstrap-4") }}
 
 
-                    </div> --}}
+                    </div>
                 </div>
             </div>
 
