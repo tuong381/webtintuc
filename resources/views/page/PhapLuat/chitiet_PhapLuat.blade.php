@@ -22,11 +22,7 @@
                     <li><span style="font-family: 'FontAwesome'; color: white">{{$chuyenmuc->TEN_CHUYENMUC_PL}}</span>
                     </li>
                     @endforeach
-                    <li class="breadcrumb-sep">/</li>
-                    @foreach($phapluat as $key=>$pl)
-                    <li><span style="font-family: 'FontAwesome'; color: #1e551e">{{$pl->TIEUDE_PL}}</span>
-                    </li>
-                    @endforeach
+
                 </ul>
             </div>
         </div>
@@ -38,8 +34,7 @@
         <div class="container">
             <div style="margin-right: 18rem">
                 <div class="page-title color">
-                   {{--  <h3 class="title-main">Market Online</h3> --}}
-                    {{-- <div class="title title-icon"> --}}
+
                         @foreach($phapluat as $key=>$pl)
                         <h2 style="background-repeat: no-repeat;
                                     background-position: center bottom;
@@ -114,12 +109,7 @@
                         </div>
                     </div>
 
-
-
-
              </div>
-
-
 
         </div>
     </div>

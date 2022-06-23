@@ -30,55 +30,43 @@
 
             <div class="title-default d-flex justify-content-between w-100 flex-wrap" style="margin-left: 57rem">
 
-
-                     <div class="content-right d-flex align-items-center justify-content-end" >
-                            <div class="popup-content">
-                                            <form {{-- id="searchbox" --}} action="{{URL::to('/tim-kiem-phap-luat')}}"
-                                                 method="post">
-                                                 {{csrf_field()}}
-                                                <div class="input-group"><input class="search-query form-control"
-                                                        type="text" name="tu_timkiem" placeholder="Nhập từ tìm kiếm" value=""
-                                                        autocomplete="off">
-                                                    <div class="input-group-btn">
-                                                        <button type="submit" name="submit_search" class="btn button btn-default float-right" style="background-color: #1e551e"><i class="fa fa-search"></i></button>
-                                                    </div>
+                <div class="content-right d-flex align-items-center justify-content-end">
+                    <div class="popup-content">
+                        <form action="{{URL::to('/tim-kiem-phap-luat')}}" method="post">
+                            {{csrf_field()}}
+                            <div class="input-group">
+                                <input class="search-query form-control" type="text" name="tu_timkiem" placeholder="Nhập từ tìm kiếm" value="" autocomplete="off">
+                                <div class="input-group-btn">
+                                    <button type="submit" name="submit_search" class="btn button btn-default float-right" style="background-color: #1e551e"><i class="fa fa-search"></i>
+                                    </button>
+                                </div>
 
 
 
-                                                </div>
-                                            </form>
-                                        </div>
-                        </div>
+                            </div>
+                        </form>
                     </div>
-
+                </div>
+            </div>
 
 
             <div class="section wrap-product-categories" style="margin-bottom: 1px; color: black">
 
                 <div class="content-about text-center m-top">
-                            <div class="row" >
-                                @foreach($chuyenmucphapluat as $key=>$chuyenmuc)
-                                <div class="col-lg-3 col-md-6 col-sm-12 mg-bottom-50" style="margin-bottom: 2rem;     ">
-                                    {{-- <div class="item" style="background-color: #ff9933">
+                    <div class="row">
+                        @foreach($chuyenmucphapluat as $key=>$chuyenmuc)
+                        <div class="col-lg-3 col-md-6 col-sm-12 mg-bottom-50" style="margin-bottom: 2rem;     ">
 
-                                        <div class="item-content">
-                                            <div class="btn button ">
-                                                <h4>{{$chuyenmuc->TEN_CHUYENMUC_PL}} </h4>
-
-                                            </div>
-                                        </div>
-                                    </div> --}}
-                                    <div class="right-left hidden-xs slow disciver-now" class="dd" style="background-color: white; width: 19rem" >
-                                        <a class="btn button button-main" href="{{URL::to('chuyen-muc-phap-luat/'.$chuyenmuc->ID_CHUYENMUC_PL)}}"
-                                            style="width: 18rem;  background-color: #1e551e; border: 1px solid #1e551e; border-radius: 1px;">{{$chuyenmuc->TEN_CHUYENMUC_PL}}</a>
-                                     </div>
-                                </div>
-                                @endforeach
+                            <div class="right-left hidden-xs slow disciver-now" class="dd" style="background-color: white; width: 19rem">
+                                <a class="btn button button-main" href="{{URL::to('chuyen-muc-phap-luat/'.$chuyenmuc->ID_CHUYENMUC_PL)}}" style="width: 18rem;  background-color: #1e551e; border: 1px solid #1e551e; border-radius: 1px;">{{$chuyenmuc->TEN_CHUYENMUC_PL}}</a>
                             </div>
                         </div>
+                        @endforeach
+                    </div>
+                </div>
 
 
-             </div>
+            </div>
 
 
 

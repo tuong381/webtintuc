@@ -65,51 +65,50 @@
 
 
 <div class="section blog-news">
-                <div class="container">
+    <div class="container">
 
-                    <div class="feature-products tab-content">
+        <div class="feature-products tab-content">
 
-                        <!-- List -->
-                      {{--   <div id="list" class="tab-pane active"> --}}
-                            <div class="block-content m-top">
-                                <div  style="display: flex; flex-wrap: wrap;">
-                                @foreach($thuvien as $key=>$tv)
 
-                                        <div class="row" style="margin-bottom: 50px; width: 32%;height: 20rem;
+            <div class="block-content m-top">
+                <div style="display: flex; flex-wrap: wrap;">
+                    @foreach($thuvien as $key=>$tv)
+
+                    <div class="row" style="margin-bottom: 50px; width: 32%;height: 20rem;
                                         margin-left: 1.5rem;cursor: pointer;" href="#">
 
-                                            @if($tv->ID_CHUYENMUC_TV==1)
-                                                <img src="{{URL::to('public/upload/'.$tv->FILE_TV)}}" style="width: 22.5rem">
-                                            @elseif($tv->ID_CHUYENMUC_TV==2)
-                                                <video style="width: 22.5rem" controls>
-                                                <source src="{{URL::to('public/upload/'.$tv->FILE_TV)}}" type="video/mp4">
-                                                 </video>
+                        @if($tv->ID_CHUYENMUC_TV==1)
+                        <img src="{{URL::to('public/upload/'.$tv->FILE_TV)}}" style="width: 22.5rem"> @elseif($tv->ID_CHUYENMUC_TV==2)
+                        <video style="width: 22.5rem" controls>
+                            <source src="{{URL::to('public/upload/'.$tv->FILE_TV)}}" type="video/mp4">
+                        </video>
 
-                                            @endif
-
+                        @endif
 
 
 
-                                        </div>
-
-
-                                 @endforeach
-
-                                </div>
-
-
-                            </div>
 
                     </div>
 
-                    <div style="margin-left: 30rem">
 
-                            {{ $thuvien->links("pagination::bootstrap-4") }}
+                    @endforeach
 
-
-                    </div>
                 </div>
+
+
             </div>
+
+        </div>
+
+        <div style="margin-left: 30rem">
+
+            {{ $thuvien->links("pagination::bootstrap-4") }}
+
+
+        </div>
+    </div>
+</div>
+
 
 
 @endsection

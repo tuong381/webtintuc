@@ -28,15 +28,6 @@
      <link rel="stylesheet" href="http://cdn.bootcss.com/toastr.js/latest/css/toastr.min.css">
 
 
-
-      {{--  <link rel="stylesheet" href="{{asset('public/frontend/css/bootstrap.min.css')}}">
-      <!-- style css -->
-      <link rel="stylesheet" href="{{asset('public/frontend/css/style.css')}}">
-      <!-- Responsive-->
-      <link rel="stylesheet" href="{{asset('public/frontend/css/responsive.css')}}"> --}}
-      <!-- fevicon -->
-   {{--    <link rel="icon" href="images/fevicon.png" type="image/gif" /> --}}
-      <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href="{{asset('public/frontend/css/jquery.mCustomScrollbar.min.css')}}">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
@@ -51,17 +42,27 @@
 
 <body class="home-1">
     <div class="all">
-        <header style=" width: 100%; z-index: 100000; position: fixed; background-color: white; box-shadow: 0px 2px 2px rgb(0 0 0 / 26%);">
+        <header style=" width: 100%; z-index: 100000; position: fixed; background-color: white; box-shadow: 0px 2px 2px rgb(0 0 0 / 26%);     margin-top: -6rem;
+    height: 6rem;">
             <div id="top-header">
                 <div class="main-header">
                     <div class="mg-left-right">
                         <div class="row">
                             <div class="col-lg-2 col-5">
-                                <div class="index-logo"><a href="index.html" title="Oars"><img src="{{asset('public/frontend/img/logo.jpg')}}" alt="img" style="height: 5rem;"></a>
-                                </div>
+                                {{-- <div class="index-logo"><a href="index.html" title="Oars"><img src="{{asset('public/frontend/img/logo.jpg')}}" alt="img" style="height: 5rem;"></a>
+                                </div> --}}
                             </div>
                             <div class="col-lg-8 d-none d-lg-block">
-                                <div class="index-menu">
+
+                                {{-- <div class="index-menu">
+                                    <nav class="main-nav" style="margin-top: 10px; margin-left: 7rem">
+                                        <p>jgeiiew</p>
+                                        <hr>
+                                    </nav>
+
+                                </div> --}}
+
+                                <div class="index-menu" >
                                     <nav class="main-nav">
                                         <ul class="megamenu">
                                             <li class="dropdown"><a href="{{URL::to('/trang-chu')}}">Trang chủ</li>
@@ -100,8 +101,6 @@
 
                                             </li>
 
-                                            {{-- <li class="dropdown"><a href="{{URL::to('phap-luat')}}">Pháp luật</a>
-                                            </li> --}}
 
                                             <li class="dropdown ">
 
@@ -322,16 +321,7 @@
 
       <script src="{{asset('public/backend/js/jquery.form-validator.min.js')}}"></script>
 
-   {{--  <script src="{{asset('public/frontend/js/jquery.min.js')}}"></script>
-      <script src="{{asset('public/frontend/js/popper.min.js')}}"></script>
-      <script src="{{asset('public/frontend/js/bootstrap.bundle.min.js')}}"></script>
-      <script src="{{asset('public/frontend/js/jquery-3.0.0.min.js')}}"></script>
-      <!-- sidebar -->
-      <script src="{{asset('public/frontend/js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
-      <script src="{{asset('public/frontend/js/custom.js')}}"></script> --}}
 
-    <!-- sweetalert   -->
-   {{--  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> --}}
     <script src="{{asset('public/frontend/js/sweetalert.min.js')}}"></script>
 
     {{-- toastr  --}}
@@ -350,13 +340,13 @@
       $('#lien-ket').on('change', function () {
           var url = $(this).val(); // get selected value
           if (url) { // require a URL
-              window.location = url; // redirect
+              // window.location = url; // redirect
+              window.open(url); // redirect
           }
           return false;
       });
     });
 </script>
-
 
 
 

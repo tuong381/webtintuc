@@ -21,61 +21,60 @@
 </div>
 
 <div class="section product-default-item">
-                <div class="container">
-                    <h4 style="font-family: MYRIADPRO-LIGHT; color: #9f6605; margin-bottom: 2rem;">
+    <div class="container">
+        <h4 style="font-family: MYRIADPRO-LIGHT; color: #9f6605; margin-bottom: 2rem;">
                         Có {{count($timkiem_VB)}} kết quả chứa từ khóa "{{$tu_timkiem}}"
                     </h4>
 
-                    <div class="feature-products tab-content">
+        <div class="feature-products tab-content">
 
-                        <!-- List -->
-                        <div id="list" class="tab-pane active">
-                            <div class="product">
-                                <div class="item">
-                                    @foreach($timkiem_VB as $key=>$vb)
-                                    <div class="row" style="margin-bottom: 50px"  >
+            <!-- List -->
+            <div id="list" class="tab-pane active">
+                <div class="product">
+                    <div class="item">
+                        @foreach($timkiem_VB as $key=>$vb)
+                        <div class="row" style="margin-bottom: 50px">
 
-                                        <div class="col-md-5 col-sm-12">
-                                            <div class="product-thumb">
-                                                <div class="product-container item-img">
-                                                    <div class="product-image-container">
-                                                        <a class="product-img-link" href="{{URL::to('chi-tiet-van-ban/'.$vb->ID_VB)}}" title=""><img class="w-100" src="{{URL::to('public/upload/'.$vb->HINHANH_VB)}}" alt="img">
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-7 col-sm-12">
-                                            <div class="content-right" style="color: black">
-                                                <a href="{{URL::to('chi-tiet-van-ban/'.$vb->ID_VB)}}" style="font-family: emoji; color: black; font-size: 25px">
-                                                    {{$vb->TIEUDE_VB}}</a>
-
-                                                <div class="price font-600 color-default" href="{{URL::to('chi-tiet-van-ban/'.$vb->ID_VB)}}">
-                                                    <span style="color: #9f6605" >{{$vb->NGAYDANG_VB}}</span>
-                                                </div>
-                                                <div class="button d-flex align-items-center" style="margin-top: 3rem">
-                                                    <a class="btn view button-main" href="{{URL::to('chi-tiet-van-ban/'.$vb->ID_VB)}}"
-                                                    style="background-color: rgba(0,0,0,0.02);
-                                                        box-shadow: 1px 1px 3px 0px rgb(0 0 0 / 20%), 0 1px 0 rgb(0 0 0 / 7%), inset 0 0 0 1px rgb(0 0 0 / 5%); color: #9f6605;
-                                                            border-color: rgba(0,0,0,0.02)" >
-                                                        Xem thêm
-                                                        <i class="fa fa-chevron-double-left"></i></a>
-                                                </div>
-                                            </div>
+                            <div class="col-md-5 col-sm-12">
+                                <div class="product-thumb">
+                                    <div class="product-container item-img">
+                                        <div class="product-image-container">
+                                            <a class="product-img-link" href="{{URL::to('chi-tiet-van-ban/'.$vb->ID_VB)}}" title=""><img class="w-100" src="{{URL::to('public/upload/'.$vb->HINHANH_VB)}}" alt="img">
+                                            </a>
                                         </div>
                                     </div>
-
-                                    @endforeach
                                 </div>
+                            </div>
+                            <div class="col-md-7 col-sm-12">
+                                <div class="content-right" style="color: black">
+                                    <a href="{{URL::to('chi-tiet-van-ban/'.$vb->ID_VB)}}" style="font-family: emoji; color: black; font-size: 25px"> {{$vb->TIEUDE_VB}}</a>
 
-
+                                    <div class="price font-600 color-default" href="{{URL::to('chi-tiet-van-ban/'.$vb->ID_VB)}}">
+                                         <span style="color: #9f6605">{{$vb->NGAYDANG_VB}}</span>
+                                    </div>
+                                    <div class="button d-flex align-items-center" style="margin-top: 3rem">
+                                        <a class="btn view button-main" href="{{URL::to('chi-tiet-van-ban/'.$vb->ID_VB)}}" style="background-color: rgba(0,0,0,0.02);
+                                                        box-shadow: 1px 1px 3px 0px rgb(0 0 0 / 20%), 0 1px 0 rgb(0 0 0 / 7%), inset 0 0 0 1px rgb(0 0 0 / 5%); color: #9f6605;
+                                                            border-color: rgba(0,0,0,0.02)">
+                                                        Xem thêm
+                                                        <i class="fa fa-chevron-double-left"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        @endforeach
                     </div>
 
 
                 </div>
             </div>
+        </div>
+
+
+    </div>
+</div>
+
 
 
 @endsection

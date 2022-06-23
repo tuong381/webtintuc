@@ -29,8 +29,6 @@
     <div class="section about">
         <div class="container">
 
-
-
             <div class="section wrap-product-categories" style="margin-bottom: 1px; color: black">
 
                 <div class="content-about text-center m-top">
@@ -83,7 +81,7 @@
                                             <div class="product-thumb">
                                                 <div class="product-container item-img">
                                                     <div class="product-image-container">
-                                                        <a class="product-img-link" href="{{URL::to('chi-tiet-diem-tin/'.$chuyenmuc->ID_DT)}}" title=""><img class="w-100" src="{{URL::to('public/upload/'.$chuyenmuc->HINHANH_DT)}}" alt="img">
+                                                        <a class="product-img-link" href="{{URL::to('chi-tiet-diem-tin/'.$chuyenmuc->ID_DT)}}" title=""><img class="w-100" src="{{URL::to('public/upload/'.$chuyenmuc->HINHANH_DT)}}" alt="img" style="height: 20rem">
                                                         </a>
                                                     </div>
                                                 </div>

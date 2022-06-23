@@ -13,11 +13,7 @@
                 <ul class="breadcrumbs primary-font">
                     <li><a href="#"><span style="font-family: 'FontAwesome'; color: white">Điểm tin</span></a>
                     </li>
-                    <li class="breadcrumb-sep">/</li>
-                    @foreach($chuyenmuc_ten as $key=>$chuyenmuc)
-                    <li><span style="font-family: 'FontAwesome'; color: white">{{$chuyenmuc->TEN_CHUYENMUC_DT}}</span>
-                    </li>
-                    @endforeach
+
                     <li class="breadcrumb-sep">/</li>
                     @foreach($diemtin as $key=>$dt)
                     <li><span style="font-family: 'FontAwesome'; color: #10550c">{{$dt->TIEUDE_DT}}</span>
@@ -34,8 +30,7 @@
         <div class="container">
             <div style="margin-right: 18rem">
                 <div class="page-title color">
-                   {{--  <h3 class="title-main">Market Online</h3> --}}
-                    {{-- <div class="title title-icon"> --}}
+
                         @foreach($diemtin as $key=>$dt)
                         <h2 style="background-repeat: no-repeat;
                                     background-position: center bottom;
@@ -113,11 +108,7 @@
                     </div>
 
 
-
-
              </div>
-
-
 
         </div>
     </div>

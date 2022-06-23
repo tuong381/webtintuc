@@ -32,7 +32,7 @@ class HomeController extends Controller
 
           $vpcc=DB::table('vanphongcongchung')
                      ->orderby('NGAYTHANHLAP_VPCC','asc')
-                     ->paginate(12);
+                     ->get();
 
           $lienket= DB::table('lienketwebsite')->get();
 

@@ -11,9 +11,6 @@
             </div>
             <div class="breadcrumbs-container text-center">
                 <ul class="breadcrumbs primary-font">
-                    <li><span style="font-family: 'FontAwesome'; color: white">Hội viên</span>
-                    </li>
-                    <li class="breadcrumb-sep">/</li>
                     <li><a href="{{URL::to('/danh-sach-vpcc')}}"><span style="font-family: 'FontAwesome'; color: white">Văn phòng công chứng</span></a>
                     </li>
 
@@ -41,12 +38,6 @@
                         </div>
                         <div class="col-md-5 col-sm-12">
 
-                            <div class="product-image-container">
-                                <img src="{{asset('public/frontend/img/logo.jpg')}}" alt="img" style="width: 8rem; height: 8rem">
-
-                            </div>
-                            <br>
-
                             <div class="page-title color m-bottom-2">
                                 <div class="title title-icon">
                                      <h2 style="background-repeat: no-repeat;
@@ -65,11 +56,7 @@
 
                                 <div class="col padding-0">
                                     <div class="item d-flex">
-                                        {{-- <div class="item-left">
-                                            <div class="icon"><i class="fa fa-map-marker"
-                                                aria-hidden="true"></i>
-                                            </div>
-                                        </div> --}}
+
                                         <div class="contact-content">
 
                                             <p style=" font-size: 20px; font-family: 'Flaticon';"> {!!$vp->THONGTIN_VPCC!!}</p>
@@ -77,10 +64,7 @@
                                     </div>
                                 </div>
 
-
-
                             </div>
-
 
                         </div>
 
@@ -90,11 +74,7 @@
 
             </div>
 
-
-
-
-
-                </div>
+         </div>
  </div>
 
 

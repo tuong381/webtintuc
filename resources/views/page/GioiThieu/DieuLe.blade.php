@@ -27,8 +27,6 @@
         <div class="container">
             <div class="title text-center">
                 <div class="page-title color">
-                   {{--  <h3 class="title-main">Market Online</h3> --}}
-                    {{-- <div class="title title-icon"> --}}
                         <h2 style="background-repeat: no-repeat;
                                     background-position: center bottom;
                                     background-size: auto;

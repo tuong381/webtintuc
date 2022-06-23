@@ -13,11 +13,7 @@
                 <ul class="breadcrumbs primary-font">
                     <li><a href="#"><span style="font-family: 'FontAwesome'; color: white">Văn bản</span></a>
                     </li>
-                    <li class="breadcrumb-sep">/</li>
-                    @foreach($chuyenmuc_ten as $key=>$chuyenmuc)
-                    <li><span style="font-family: 'FontAwesome'; color: white">{{$chuyenmuc->TEN_CHUYENMUC_VB}}</span>
-                    </li>
-                    @endforeach
+
                     <li class="breadcrumb-sep">/</li>
                     @foreach($vanban as $key=>$vb)
                     <li><span style="font-family: 'FontAwesome'; color: #10550c">{{$vb->TIEUDE_VB}}</span>
@@ -29,13 +25,12 @@
     </div>
 </div>
 
+
 <section>
     <div class="section about">
         <div class="container">
             <div style="margin-right: 18rem">
                 <div class="page-title color">
-                   {{--  <h3 class="title-main">Market Online</h3> --}}
-                    {{-- <div class="title title-icon"> --}}
                         @foreach($vanban as $key=>$vb)
                         <h2 style="background-repeat: no-repeat;
                                     background-position: center bottom;
@@ -53,7 +48,7 @@
                         @endforeach
 
                         <br>
-                    {{-- </div> --}}
+
                 </div>
             </div>
 

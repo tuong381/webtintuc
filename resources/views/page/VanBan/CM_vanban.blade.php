@@ -27,36 +27,54 @@
 
 <section>
     <div class="section about">
+    <div class="container">
+
+        <div class="title-default d-flex justify-content-between w-100 flex-wrap" style="margin-left: 57rem">
+
+
+            <div class="content-right d-flex align-items-center justify-content-end">
+                <div class="popup-content">
+                    <form action="{{URL::to('/tim-kiem-van-ban')}}" method="post">
+                        {{csrf_field()}}
+                        <div class="input-group">
+                            <input class="search-query form-control" type="text" name="tu_timkiem" placeholder="Nhập từ tìm kiếm" value="" autocomplete="off">
+                            <div class="input-group-btn">
+                                <button type="submit" name="submit_search" class="btn button btn-default float-right" style="background-color: #1e551e"><i class="fa fa-search"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<section>
+    <div class="section about">
         <div class="container">
 
+            <div class="title-default d-flex justify-content-between w-100 flex-wrap" style="margin-left: 57rem">
 
 
-            <div class="section wrap-product-categories" style="margin-bottom: 1px; color: black">
-
-                <div class="content-about text-center m-top">
-                            <div class="row" style="justify-content: center">
-                                @foreach($chuyenmucvanban as $key=>$chuyenmuc)
-                                <div class="col-lg-3 col-md-6 col-sm-12 mg-bottom-50" >
-                                   {{--  <div class="item" style="background-color: #ff9933">
-
-                                        <div class="item-content">
-                                            <div class="sub-title">
-                                                <h4>{{$chuyenmuc->TEN_CHUYENMUC_DT}} </h4>
-                                                <p></p>
-                                            </div>
-                                        </div>
-                                    </div> --}}
-                                    <div class="right-left hidden-xs slow disciver-now" class="dd" >
-                                        <a class="btn button button-main" style="background-color:#1e551e" href="{{URL::to('chuyen-muc-van-ban/'.$chuyenmuc->ID_CHUYENMUC_VB)}}">{{$chuyenmuc->TEN_CHUYENMUC_VB}}</a>
-                                     </div>
+                <div class="content-right d-flex align-items-center justify-content-end">
+                    <div class="popup-content">
+                        <form {{-- id="searchbox" --}} action="{{URL::to('/tim-kiem-van-ban')}}" method="post">
+                            {{csrf_field()}}
+                            <div class="input-group">
+                                <input class="search-query form-control" type="text" name="tu_timkiem" placeholder="Nhập từ tìm kiếm" value="" autocomplete="off">
+                                <div class="input-group-btn">
+                                    <button type="submit" name="submit_search" class="btn button btn-default float-right" style="background-color: #1e551e"><i class="fa fa-search"></i>
+                                    </button>
                                 </div>
-                                @endforeach
+
                             </div>
-                        </div>
-
-
-             </div>
-
+                        </form>
+                    </div>
+                </div>
+            </div>
 
 
         </div>
@@ -64,10 +82,8 @@
 </section>
 
 
-
 <div class="section product-default-item">
                 <div class="container">
-
 
                     <div class="feature-products tab-content">
 
@@ -83,7 +99,7 @@
                                             <div class="product-thumb">
                                                 <div class="product-container item-img">
                                                     <div class="product-image-container">
-                                                        <a class="product-img-link" href="{{URL::to('chi-tiet-van-ban/'.$chuyenmuc->ID_VB)}}" title=""><img class="w-100" src="{{URL::to('public/upload/'.$chuyenmuc->HINHANH_VB)}}" alt="img">
+                                                        <a class="product-img-link" href="{{URL::to('chi-tiet-van-ban/'.$chuyenmuc->ID_VB)}}" title=""><img class="w-100" src="{{URL::to('public/upload/'.$chuyenmuc->HINHANH_VB)}}" alt="img" style="height: 20rem">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -121,13 +137,12 @@
 
                     <div style="margin-left: 30rem">
 
-                            {{ $danhmuc->links("pagination::bootstrap-4") }}
+                        {{ $danhmuc->links("pagination::bootstrap-4") }}
 
 
                     </div>
                 </div>
             </div>
-
 
 
 
