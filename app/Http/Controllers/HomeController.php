@@ -26,24 +26,20 @@ class HomeController extends Controller
          $vanban=DB::table('vanban')->orderby('ID_VB','desc')->limit(3)->get();
           $phapluat=DB::table('phapluat')->orderby('ID_PL','desc')->limit(3)->get();
 
-          $vpcc=DB::table('vanphongcongchung')
-                     ->orderby('ID_VPCC','desc')
-                     ->get();
+          // $vpcc=DB::table('vanphongcongchung')
+                     // ->orderby('ID_VPCC','asc')
+                     // ->get();
 
-          $vp=DB::table('vanphongcongchung')
-                     ->orderby('ID_VPCC','desc')
+          $vpcc=DB::table('vanphongcongchung')
+                     ->orderby('NGAYTHANHLAP_VPCC','asc')
                      ->paginate(12);
 
           $lienket= DB::table('lienketwebsite')->get();
 
-          // $data = array();
-          // $data['luotxem'] = $request->luotxem+1;
-          // $xem1 =DB::table('thongkeslx')->update($data);
-          // $xem =DB::table('thongkeslx')->get();
 
         return view('page.home')->with('diemtin',$diemtin)->with('diemtin1',$diemtin1)
-                ->with('phapluat',$phapluat)->with('vanban',$vanban)->with('vpcc',$vpcc)
-                ->with('vp',$vp)->with('lienket', $lienket);
+                ->with('phapluat',$phapluat)->with('vanban',$vanban)
+                ->with('vpcc',$vpcc)->with('lienket', $lienket);
 
     }
 
@@ -102,7 +98,7 @@ class HomeController extends Controller
     public function vpcc(){
         $lienket= DB::table('lienketwebsite')->get();
 
-         $vpcc=DB::table('vanphongcongchung')->orderby('ID_VPCC','desc')->paginate(12);
+         $vpcc=DB::table('vanphongcongchung')->orderby('NGAYTHANHLAP_VPCC','asc')->paginate(12);
         return view('page.HoiVien.VPCC')->with('vpcc',$vpcc)->with('lienket', $lienket);
     }
 

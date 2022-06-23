@@ -22,6 +22,9 @@
 
 <div class="section product-default-item">
                 <div class="container">
+                    <h4 style="font-family: MYRIADPRO-LIGHT; color: #9f6605; margin-bottom: 2rem;">
+                        Có {{count($timkiem_DT)}} kết quả chứa từ khóa "{{$tu_timkiem}}"
+                    </h4>
 
                     <div class="feature-products tab-content">
 

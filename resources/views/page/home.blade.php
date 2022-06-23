@@ -8,16 +8,14 @@
     <div id="tiva-slideshow" class="nivoSlider">
         <a href="#" title="Slideshow image"><img class="img-fluid" src="{{asset('public/frontend/img/bannerTC.jpg')}}" title="#caption1" alt="Slideshow image" >
         </a>
-        {{-- <a href="#" title="Slideshow image"><img class="img-fluid" src="{{asset('public/frontend/img/slideshow/banner1.jpg')}}" title="#caption2" alt="Slideshow image">
-        </a> --}}
+
     </div>
      <div id="caption1" class="nivo-html-caption hidden-sm hidden-xs d-none col-lg-block">
         <div class="tiva-caption m-left">
-            {{-- <div class="left-right hidden-xs"><span class="font-stre ">Cửa hàng của chúng tôi</span>
-            </div> - --}}
+
             <div class="right-left hidden-xs normal very_large_60" style="margin-top: 500px">
                 <h3 style="color: #334d4d; font-family: 'Flaticon'">Hội công chứng viên Cần Thơ</h3>
-                {{-- <p style="color: white">Chuyên cung cấp thực phẩm tươi ngon, an toàn, chất lượng uy tính, giá cả hợp lý.</p> --}}
+
             </div>
             <div class="Praesent"></div>
 
@@ -259,7 +257,7 @@
                       {{--   <div id="list" class="tab-pane active"> --}}
                             <div class="block-content m-top">
                                 <div  style="display: flex; flex-wrap: wrap;">
-                                @foreach($vp as $key=>$vp)
+                                @foreach($vpcc as $key=>$vp)
 
                                         <div class="row" style="margin-bottom: 50px; width: 32%;height: 10rem;
                                         box-shadow: 1px 1px 3px 0px rgb(0 0 0 / 20%), 0 1px 0 rgb(0 0 0 / 20%), inset 0 0 0 1px rgb(0 0 0 / 5%); margin-left: 1.5rem;cursor: pointer;" href="#">
@@ -296,12 +294,12 @@
 
                     </div>
 
-                    {{-- <div style="margin-left: 30rem">
+                    <div style="margin-left: 30rem">
 
-                            {{ $vp->links("pagination::bootstrap-4") }}
+                            {{ $vpcc->links("pagination::bootstrap-4") }}
 
 
-                    </div> --}}
+                    </div>
                 </div>
             </div>
 

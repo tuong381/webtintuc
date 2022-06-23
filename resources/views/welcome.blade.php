@@ -42,6 +42,9 @@
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
+      <link rel="icon" href="{{asset('public/frontend/img/logo.jpg')}}" type="image/gif" />
+       <title> Hội công chứng viên Cần Thơ</title>
+
 
 </head>
 

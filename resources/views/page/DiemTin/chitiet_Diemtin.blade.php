@@ -88,7 +88,7 @@
                                                 <div class="article-item clearfix ">
                                                     <div class="article-image" style="width: 18rem">
                                                         <a href="{{URL::to('chi-tiet-diem-tin/'.$lienquan->ID_DT)}}"><img class="img-fluid"
-                                                            src="{{URL::to('public/upload/'.$lienquan->HINHANH_DT)}}" alt="">
+                                                            src="{{URL::to('public/upload/'.$lienquan->HINHANH_DT)}}" alt="" style="width: 18rem; height: 13rem">
                                                         </a>
                                                     </div>
                                                     <div class="articleinfo-group" style="width: 18rem">
