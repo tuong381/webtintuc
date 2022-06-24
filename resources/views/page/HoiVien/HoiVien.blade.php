@@ -45,7 +45,9 @@
                                     </div>
                                     <div class="item-content">
                                         <div class="sub-title">
-                                            <h3 style="    font-size: 19px; font-family: math; color: black;">{{$hv->TEN_HV}}</h3>
+                                            <h3 style="    font-size: 19px; font-family: math; color: black; font-weight: 600">{{$hv->TEN_HV}}</h3>
+
+                                            <h3 style="    font-size: 19px; font-family: math; color: black;">{{$hv->VANPHONG_HV}}</h3>
                                         </div>
                                     </div>
                                 </div>

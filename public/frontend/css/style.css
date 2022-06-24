@@ -7,3 +7,11 @@ color: #b36b00;
 .nivo-controlNav{
     color: white;
 }
+
+a.nivo-prevNav{
+    display: none;
+}
+
+a.nivo-nextNav{
+    display:none;
+}

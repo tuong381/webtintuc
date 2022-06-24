@@ -24,8 +24,12 @@ class HoiVienController extends Controller
                      ->where('vanphongcongchung.ID_VPCC',$ID_VPCC)
                     ->limit(1)->get();
 
+        $vpcc1=DB::table('vanphongcongchung')
+                     ->orderby('NGAYTHANHLAP_VPCC','asc')
+                     ->get();
 
-         return view('page.HoiVien.chitiet_VPCC') ->with('vpcc',$vpcc)
+
+         return view('page.HoiVien.chitiet_VPCC') ->with('vpcc',$vpcc)->with('vpcc1', $vpcc1)
                 ->with('ten',$ten)->with('lienket', $lienket);
 }
 
