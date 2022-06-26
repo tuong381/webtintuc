@@ -45,12 +45,26 @@
         <header style=" width: 100%; z-index: 100000; position: fixed; background-color: white; box-shadow: 0px 2px 2px rgb(0 0 0 / 26%);     margin-top: -6rem;
     height: 6rem;">
             <div id="top-header">
-                <div class="main-header">
+                <div class="main-header" >
                     <div class="mg-left-right">
                         <div class="row">
                             <div class="col-lg-2 col-5">
-                                {{-- <div class="index-logo"><a href="index.html" title="Oars"><img src="{{asset('public/frontend/img/logo.jpg')}}" alt="img" style="height: 5rem;"></a>
-                                </div> --}}
+                                <div class="index-logo" >
+                                    {{-- <p style="margin-top: 25px;
+                                            font-family: MYRIADPRO-LIGHT;
+                                            font-size: 16px;
+                                            color: black;" >
+                                        hoicongchungct@gmail.com
+                                        02923.832.213
+                                    </p> --}}
+
+                                    {{-- <p style="line-height: 100px;
+                                            font-family: MYRIADPRO-LIGHT;
+                                            font-size: 16px;
+                                            color: black;" >
+                                        hoicongchungct@gmail.com
+                                    </p> --}}
+                                </div>
                             </div>
                             <div class="col-lg-8 d-none d-lg-block">
 
@@ -114,7 +128,7 @@
                                                     <ul>
 
                                                         <li><a href="{{URL::to('/danh-sach-hoi-vien')}}">Danh sách hội viên</a></li>
-                                                        <li><a href="{{URL::to('/danh-sach-vpcc')}}">Danh sách VPCC</a></li>
+                                                        <li><a href="{{URL::to('/danh-sach-vpcc')}}">Danh sách TCHNCC</a></li>
                                                         <li><a href="{{URL::to('bieu-mau-ccv')}}">Biểu mẫu CCV</a></li>
 
 

@@ -154,7 +154,7 @@
                             <div class="page-title color">
                                 <div class="title-icon text-left">
                                     <h2 class="title-h2" style="font-family: UTM-COPPERPLATE;
-                                                font-size: 30px;">PHÁP LUẬT CỦA HỘI</h2>
+                                                font-size: 30px;">VĂN BẢN PHÁP LUẬT</h2>
                                 </div>
                             </div>
 

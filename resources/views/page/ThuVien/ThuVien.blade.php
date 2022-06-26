@@ -39,7 +39,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-12 mg-bottom-50">
 
                             <div class="right-left hidden-xs slow disciver-now" class="dd">
-                                <a class="btn button button-main" style="background-color: #1e551e" href="{{URL::to('/phap-luat')}}">PHÁP LUẬT</a>
+                                <a class="btn button button-main" style="background-color: #1e551e" href="{{URL::to('/phap-luat')}}">VĂN BẢN PHÁP LUẬT</a>
                             </div>
                         </div>
 

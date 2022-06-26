@@ -39,7 +39,7 @@
                                 <div class="product-thumb">
                                     <div class="product-container item-img">
                                         <div class="product-image-container">
-                                            <a class="product-img-link" href="{{URL::to('chi-tiet-van-ban/'.$vb->ID_VB)}}" title=""><img class="w-100" src="{{URL::to('public/upload/'.$vb->HINHANH_VB)}}" alt="img">
+                                            <a class="product-img-link" href="{{URL::to('chi-tiet-van-ban/'.$vb->ID_VB)}}" title=""><img class="w-100" src="{{URL::to('public/upload/'.$vb->HINHANH_VB)}}" alt="img" style="border-radius: 0.5rem">
                                             </a>
                                         </div>
                                     </div>

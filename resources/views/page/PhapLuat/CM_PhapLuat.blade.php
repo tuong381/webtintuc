@@ -15,7 +15,7 @@
                     </li>
                     <li class="breadcrumb-sep">/</li>
 
-                    <li><a href="#"><span style="font-family: 'FontAwesome'; color: white">Pháp luật</span></a>
+                    <li><a href="#"><span style="font-family: 'FontAwesome'; color: white">Văn bản pháp luật</span></a>
                     </li>
                     <li class="breadcrumb-sep">/</li>
 

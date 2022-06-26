@@ -14,7 +14,7 @@
                     <li><span style="font-family: 'FontAwesome'; color: white">Hội viên</span>
                     </li>
                     <li class="breadcrumb-sep">/</li>
-                    <li><a href="{{URL::to('/danh-sach-vpcc')}}"><span style="font-family: 'FontAwesome'; color: #10550c">Văn phòng công chứng</span></a>
+                    <li><a href="{{URL::to('/danh-sach-vpcc')}}"><span style="font-family: 'FontAwesome'; color: #10550c">Tổ chức hành nghề công chứng</span></a>
                     </li>
                     </li>
                 </ul>

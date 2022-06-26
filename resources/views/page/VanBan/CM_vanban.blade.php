@@ -99,7 +99,7 @@
                                             <div class="product-thumb">
                                                 <div class="product-container item-img">
                                                     <div class="product-image-container">
-                                                        <a class="product-img-link" href="{{URL::to('chi-tiet-van-ban/'.$chuyenmuc->ID_VB)}}" title=""><img class="w-100" src="{{URL::to('public/upload/'.$chuyenmuc->HINHANH_VB)}}" alt="img" style="height: 20rem">
+                                                        <a class="product-img-link" href="{{URL::to('chi-tiet-van-ban/'.$chuyenmuc->ID_VB)}}" title=""><img class="w-100" src="{{URL::to('public/upload/'.$chuyenmuc->HINHANH_VB)}}" alt="img" style="height: 20rem; border-radius: 0.5rem">
                                                         </a>
                                                     </div>
                                                 </div>
