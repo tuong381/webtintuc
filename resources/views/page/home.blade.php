@@ -32,7 +32,7 @@
                                     font-weight: 600;
                                     font-size: 30px;
                                     font-family: UTM-COPPERPLATE;
-                                     margin-right: 57rem;">ĐIỂM TIN </h2>
+                                     margin-right: 60.5rem;">ĐIỂM TIN </h2>
 
                     <br> {{-- </div> --}}
             </div>
@@ -54,14 +54,16 @@
 
                         <div class="group-store m-top">
 
-                            <div class="index-core-group flex-center clearfix d-flex align-items-center">
+                            <div class="index-core-group flex-center clearfix d-flex align-items-center"
 
-                                <div class="row" style=" display: block;">
+                            >
+
+                                <div class="row" style=" display: block">
                                     @foreach($diemtin as $key=>$dt)
 
-                                    <div class="index-core-group flex-center clearfix  align-items-center">
+                                    <div class="index-core-group flex-center clearfix  align-items-center"  style="height: 9rem">
                                         <div class="item-img float-left" style="width: 16rem">
-                                            <a href="{{URL::to('chi-tiet-diem-tin/'.$dt->ID_DT)}}" title=""><img class="img-fluid" style="height: 8rem; width: 15rem;"  src="{{URL::to('public/upload/'.$dt->HINHANH_DT)}}"  ></a>
+                                            <a href="{{URL::to('chi-tiet-diem-tin/'.$dt->ID_DT)}}" title=""><img class="img-fluid" style="height: 9rem; width: 15rem;"  src="{{URL::to('public/upload/'.$dt->HINHANH_DT)}}"  ></a>
                                         </div>
                                         <div class="item-content">
                                             <div class="sub-title">
