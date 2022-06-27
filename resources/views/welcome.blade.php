@@ -37,6 +37,11 @@
        <title> Hội công chứng viên Cần Thơ</title>
 
 
+
+       <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
+
+
+
 </head>
 
 
@@ -105,9 +110,7 @@
 
                                             </li>
                                             <li class="dropdown blog-fullwidth"><a href="{{URL::to('diem-tin')}}">Điểm tin</a>
-                                                <div class="dropdown-menu level2 header blog">
 
-                                                </div>
 
                                             </li>
 
