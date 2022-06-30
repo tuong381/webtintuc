@@ -20,8 +20,8 @@ class HomeController extends Controller
 
     // trang chu
     public function index(){
-        $diemtin1=DB::table('diemtin')->orderby('ID_DT','desc')->limit(1)->get();
-         $diemtin=DB::table('diemtin')->orderby('ID_DT','desc')->limit(3)->get();
+        $diemtin1=DB::table('diemtin')->limit(1)->get();
+         $diemtin=DB::table('diemtin')->orderby('ID_DT','desc') ->limit(3)->get();
 
          $vanban=DB::table('vanban')->orderby('ID_VB','desc')->limit(3)->get();
           $phapluat=DB::table('phapluat')->orderby('ID_PL','desc')->limit(3)->get();
